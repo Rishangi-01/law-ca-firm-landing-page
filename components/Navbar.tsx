@@ -92,7 +92,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
       <div className="hidden lg:block bg-[#061b32] text-white">
-        <div className="mx-auto flex max-w-[1800px] items-center justify-between px-6 py-2.5 xl:px-10">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between py-2.5 px-5 sm:px-8 lg:px-12 xl:px-12">
           <div className="flex items-center gap-7 text-[14px] xl:text-[16px]">
             <a
               href={siteInfoData.mobileMenu.phoneHref}
@@ -159,7 +159,7 @@ export default function Navbar() {
             width={320}
             height={100}
             priority
-            className="h-[65px] w-[210px] object-contain sm:h-[75px] sm:w-[250px] lg:h-[65px] lg:w-[320px]"
+            className="h-[65px] w-[210px] object-contain sm:h-[75px] sm:w-[250px] lg:h-[65px] lg:w-[290px]"
           />
         </Link>
 

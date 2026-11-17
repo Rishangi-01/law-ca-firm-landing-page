@@ -48,7 +48,7 @@ export default function ContactSection() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="relative isolate overflow-hidden bg-[#faf8f5] px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24 w-full"
+      className="relative isolate overflow-hidden bg-[#faf8f5] py-16 sm:py-20 lg:py-24 w-full px-5 sm:px-8 lg:px-12 xl:px-12"
     >
       {/* Right-side Lady Justice background */}
       <div
@@ -66,7 +66,7 @@ export default function ContactSection() {
         className="pointer-events-none absolute -left-40 top-20 -z-10 h-96 w-96 rounded-full bg-[#bd831b]/[0.045] blur-3xl"
       />
 
-      <div className="mx-auto max-w-[1550px]">
+      <div className="mx-auto max-w-[1600px]">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-14">
 
           {/* ================================= */}

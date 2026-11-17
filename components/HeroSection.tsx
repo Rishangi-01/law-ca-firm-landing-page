@@ -32,7 +32,7 @@ export default function HeroSection() {
     <section id="home" className="relative isolate min-h-[720px] overflow-hidden bg-[#fffefa] lg:min-h-[900px] w-full">
 
       {/* TOP CONTENT */}
-      <div className="relative z-10 mx-auto max-w-[1800px] px-5 pt-12 sm:px-8 sm:pt-16 lg:px-14 lg:pt-12 xl:px-20">
+      <div className="relative z-10 mx-auto max-w-[1600px] pt-12 sm:pt-16 lg:pt-12 px-5 sm:px-8 lg:px-12 xl:px-12">
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.9fr_0.9fr] lg:gap-12">
 

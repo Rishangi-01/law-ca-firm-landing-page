@@ -72,7 +72,7 @@ export default function PracticeAreas() {
       {/* DECORATIVE LIGHT */}
       <div className="pointer-events-none absolute -right-40 -top-40 -z-10 h-[450px] w-[450px] rounded-full bg-[#b77d0b]/10 blur-[120px]" />
 
-      <div className="mx-auto max-w-[1800px] px-5 sm:px-8 lg:px-12 xl:px-16">
+      <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-12">
 
         {/* SECTION HEADING */}
         <motion.div

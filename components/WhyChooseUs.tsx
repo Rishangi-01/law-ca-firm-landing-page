@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
       {/* SUBTLE BACKGROUND DECORATION */}
       <div className="pointer-events-none absolute -right-40 top-0 h-[400px] w-[400px] rounded-full bg-[#d49b19]/[0.04] blur-[100px]" />
 
-      <div className="mx-auto max-w-[1800px] px-5 sm:px-8 lg:px-12 xl:px-16">
+      <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-12">
 
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.78fr_1.42fr] lg:gap-12 xl:gap-16">
 

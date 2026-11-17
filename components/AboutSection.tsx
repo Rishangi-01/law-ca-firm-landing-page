@@ -51,7 +51,7 @@ export default function AboutSection() {
         <FaScaleBalanced className="text-[150px] sm:text-[190px]" />
       </div>
 
-      <div className="container mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+      <div className="container mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12 xl:px-12">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.72fr_1.15fr_1.38fr] lg:gap-10 xl:gap-14">
 
           <motion.div

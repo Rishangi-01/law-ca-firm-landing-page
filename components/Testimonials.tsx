@@ -68,9 +68,9 @@ export default function Testimonials() {
     <section
       id="testimonials"
       aria-labelledby="testimonials-heading"
-      className="bg-[#f8f7f4] px-3 py-12 sm:px-5 sm:py-12 lg:px-8 lg:py-12 w-full"
+      className="bg-[#f8f7f4] py-12 sm:py-12 lg:py-12 w-full px-5 sm:px-8 lg:px-12 xl:px-12"
     >
-      <div className="mx-auto max-w-[1750px]">
+      <div className="mx-auto max-w-[1600px]">
 
         
         <div className="relative isolate grid min-h-[620px] overflow-hidden rounded-[24px] bg-[#071d32] shadow-[0_25px_70px_rgba(5,25,43,0.16)] md:min-h-[650px] lg:min-h-[700px] lg:grid-cols-[1.12fr_0.88fr] xl:min-h-[750px]">

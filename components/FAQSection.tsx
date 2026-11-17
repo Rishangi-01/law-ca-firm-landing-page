@@ -32,7 +32,7 @@ export default function FAQSection() {
     <section
       id="faqs"
       aria-labelledby="faq-heading"
-      className="relative overflow-hidden bg-[#faf8f5] px-4 py-12 sm:px-6 sm:py-12 lg:px-10 lg:py-12 w-full"
+      className="relative overflow-hidden bg-[#faf8f5] py-12 sm:py-12 lg:py-12 w-full px-5 sm:px-8 lg:px-12 xl:px-12"
     >
       
       <div
