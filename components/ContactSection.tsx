@@ -2,7 +2,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import {
   motion,
   useReducedMotion,
@@ -16,6 +16,7 @@ import {
   CheckCircle2,
   ArrowUpRight,
 } from "lucide-react";
+import { contactPageData } from "@/data";
 
 export default function ContactSection() {
   const shouldReduceMotion = useReducedMotion();
@@ -36,8 +37,7 @@ export default function ContactSection() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Demo success state.
-    // Replace this with your API / backend integration.
+
     setIsSubmitted(true);
   };
 
@@ -56,7 +56,7 @@ export default function ContactSection() {
         className="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-[42%] bg-cover bg-center bg-no-repeat opacity-[0.13] lg:block"
         style={{
           backgroundImage:
-            "url('/images/lady-justice-bg.png')",
+            `url('${contactPageData.backgroundImage}')`,
         }}
       />
 
@@ -88,7 +88,7 @@ export default function ContactSection() {
               />
 
               <span className="text-sm font-bold uppercase tracking-[0.1em] text-[#10243e] sm:text-base">
-                Contact Us
+                {contactPageData.eyebrow}
               </span>
 
               <span className="h-[2px] w-16 bg-[#bd831b] sm:w-24" />
@@ -99,16 +99,15 @@ export default function ContactSection() {
               id="contact-heading"
               className="max-w-[680px] font-serif text-5xl font-bold leading-[1.08] tracking-tight text-[#10243e] sm:text-6xl lg:text-[4.5rem] xl:text-[4.5rem]"
             >
-              Feel Free to
+              {contactPageData.title[0]}
               <span className="block text-[#bd831b]">
-                Write Us Anytime
+                {contactPageData.title[1]} {contactPageData.highlight}
               </span>
             </h2>
 
             {/* Description */}
             <p className="mt-6 max-w-[630px] text-base leading-relaxed text-[#55565b] sm:text-lg lg:text-xl">
-              Have a legal question or need professional
-              advice? Our team is here to help you.
+              {contactPageData.text}
             </p>
 
             {/* Contact Image */}
@@ -124,8 +123,8 @@ export default function ContactSection() {
               className="relative mt-8 h-[250px] w-full overflow-hidden sm:h-[330px] lg:h-[350px] xl:h-[380px]"
             >
               <Image
-                src="/images/contact-legal.png"
-                alt="Judge's gavel and golden scales of justice"
+                src={contactPageData.sectionImage}
+                alt={contactPageData.sectionImageAlt}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -161,19 +160,15 @@ export default function ContactSection() {
                   </div>
 
                   <div className="min-w-0">
-                    <a
-                      href="tel:+919876543210"
-                      className="block text-sm font-semibold text-[#10243e] transition-colors hover:text-[#bd831b] sm:text-base"
-                    >
-                      +91 98765 43210
-                    </a>
-
-                    <a
-                      href="tel:+919876543211"
-                      className="mt-1 block text-sm font-semibold text-[#10243e] transition-colors hover:text-[#bd831b] sm:text-base"
-                    >
-                      +91 98765 43211
-                    </a>
+                    {contactPageData.contactInfo.phones.map((phone, index) => (
+                      <a
+                        key={phone.href}
+                        href={phone.href}
+                        className={`${index > 0 ? "mt-1 " : ""}block text-sm font-semibold text-[#10243e] transition-colors hover:text-[#bd831b] sm:text-base`}
+                      >
+                        {phone.label}
+                      </a>
+                    ))}
                   </div>
                 </div>
 
@@ -185,19 +180,19 @@ export default function ContactSection() {
 
                   <div className="min-w-0">
                     <a
-                      href="mailto:info@lawfirm.com"
+                      href={contactPageData.contactInfo.email.href}
                       className="block break-all text-sm font-semibold text-[#10243e] transition-colors hover:text-[#bd831b] sm:text-base"
                     >
-                      info@lawfirm.com
+                      {contactPageData.contactInfo.email.label}
                     </a>
 
                     <a
-                      href="https://lawfirm.com"
+                      href={contactPageData.contactInfo.website.href}
                       target="_blank"
                       rel="noreferrer"
                       className="mt-1 flex items-center gap-1 text-sm font-semibold text-[#10243e] transition-colors hover:text-[#bd831b] sm:text-base"
                     >
-                      www.lawfirm.com
+                      {contactPageData.contactInfo.website.label}
                       <ArrowUpRight size={13} />
                     </a>
                   </div>
@@ -212,9 +207,14 @@ export default function ContactSection() {
 
                 <div>
                   <p className="text-sm font-semibold leading-relaxed text-[#10243e] sm:text-base lg:text-lg">
-                    123, Legal Avenue, Sector 62,
-                    <br />
-                    Noida, Uttar Pradesh – 201301
+                    {contactPageData.contactInfo.addressLines.map(
+                      (line, index) => (
+                        <Fragment key={line}>
+                          {index > 0 && <br />}
+                          {line}
+                        </Fragment>
+                      ),
+                    )}
                   </p>
                 </div>
               </div>
@@ -268,13 +268,11 @@ export default function ContactSection() {
                   </div>
 
                   <h3 className="font-serif text-3xl font-bold text-[#10243e]">
-                    Thank You!
+                    {contactPageData.form.successTitle}
                   </h3>
 
                   <p className="mt-4 max-w-sm text-base leading-relaxed text-[#656565]">
-                    Your message has been submitted in this
-                    demo. Connect the form to your backend
-                    to deliver real enquiries.
+                    {contactPageData.form.successText.join(" ")}
                   </p>
 
                   <button
@@ -282,7 +280,7 @@ export default function ContactSection() {
                     onClick={() => setIsSubmitted(false)}
                     className="mt-8 bg-[#bd831b] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#10243e]"
                   >
-                    Send Another Message
+                    {contactPageData.form.successButton}
                   </button>
                 </motion.div>
               ) : (
@@ -296,15 +294,15 @@ export default function ContactSection() {
                       htmlFor="contact-name"
                       className="sr-only"
                     >
-                      Your Name *
+                      {contactPageData.form.fields.firstName.label}
                     </label>
                     <input
                       id="contact-name"
-                      type="text"
-                      name="name"
-                      placeholder="Your Name *"
-                      autoComplete="name"
-                      required
+                      type={contactPageData.form.fields.firstName.type}
+                      name={contactPageData.form.fields.firstName.name}
+                      placeholder={contactPageData.form.fields.firstName.placeholder}
+                      autoComplete={contactPageData.form.fields.firstName.autoComplete}
+                      required={contactPageData.form.fields.firstName.required}
                       className={inputClass}
                     />
                   </div>
@@ -315,15 +313,15 @@ export default function ContactSection() {
                       htmlFor="contact-email"
                       className="sr-only"
                     >
-                      Your Email *
+                      {contactPageData.form.fields.email.label}
                     </label>
                     <input
                       id="contact-email"
-                      type="email"
-                      name="email"
-                      placeholder="Your Email *"
-                      autoComplete="email"
-                      required
+                      type={contactPageData.form.fields.email.type}
+                      name={contactPageData.form.fields.email.name}
+                      placeholder={contactPageData.form.fields.email.placeholder}
+                      autoComplete={contactPageData.form.fields.email.autoComplete}
+                      required={contactPageData.form.fields.email.required}
                       className={inputClass}
                     />
                   </div>
@@ -334,15 +332,15 @@ export default function ContactSection() {
                       htmlFor="contact-phone"
                       className="sr-only"
                     >
-                      Your Phone *
+                      {contactPageData.form.fields.phone.label}
                     </label>
                     <input
                       id="contact-phone"
-                      type="tel"
-                      name="phone"
-                      placeholder="Your Phone *"
-                      autoComplete="tel"
-                      required
+                      type={contactPageData.form.fields.phone.type}
+                      name={contactPageData.form.fields.phone.name}
+                      placeholder={contactPageData.form.fields.phone.placeholder}
+                      autoComplete={contactPageData.form.fields.phone.autoComplete}
+                      required={contactPageData.form.fields.phone.required}
                       className={inputClass}
                     />
                   </div>
@@ -353,13 +351,13 @@ export default function ContactSection() {
                       htmlFor="contact-subject"
                       className="sr-only"
                     >
-                      Subject
+                      {contactPageData.form.fields.lastName.label}
                     </label>
                     <input
                       id="contact-subject"
-                      type="text"
-                      name="subject"
-                      placeholder="Subject"
+                      type={contactPageData.form.fields.lastName.type}
+                      name={contactPageData.form.fields.lastName.name}
+                      placeholder={contactPageData.form.fields.lastName.placeholder}
                       className={inputClass}
                     />
                   </div>
@@ -370,14 +368,14 @@ export default function ContactSection() {
                       htmlFor="contact-message"
                       className="sr-only"
                     >
-                      Your Message *
+                      {contactPageData.form.fields.message.label}
                     </label>
 
                     <textarea
                       id="contact-message"
-                      name="message"
-                      placeholder="Your Message *"
-                      required
+                      name={contactPageData.form.fields.message.name}
+                      placeholder={contactPageData.form.fields.message.placeholder}
+                      required={contactPageData.form.fields.message.required}
                       rows={5}
                       className={`${inputClass} min-h-[130px] resize-y`}
                     />
@@ -399,7 +397,7 @@ export default function ContactSection() {
                       }
                       className="group inline-flex min-h-[58px] items-center justify-center gap-4 bg-gradient-to-r from-[#c58b1c] to-[#a96e0d] px-8 py-4 text-base font-semibold text-white shadow-[0_8px_20px_rgba(189,131,27,0.20)] transition-all duration-300 hover:from-[#10243e] hover:to-[#173c59] sm:min-w-[270px] sm:text-lg"
                     >
-                      Send Message
+                      {contactPageData.form.submitLabel}
 
                       <Send
                         size={21}

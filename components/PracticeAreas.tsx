@@ -14,65 +14,19 @@ import {
   FaShieldAlt,
   FaArrowRight,
 } from "react-icons/fa";
+import { servicesData } from "@/data";
 
-const practiceAreas = [
-  {
-    title: "Civil Law",
-    description:
-      "Legal support for disputes related to property, contracts and personal matters.",
-    icon: FaBalanceScale,
-    href: "/practice-areas/civil-law",
-  },
-  {
-    title: "Family Law",
-    description:
-      "Guidance on marriage, divorce, child custody and family-related legal matters.",
-    icon: FaUsers,
-    href: "/practice-areas/family-law",
-  },
-  {
-    title: "Criminal Defense",
-    description:
-      "Strong representation in criminal cases to protect your rights and ensure a fair trial.",
-    icon: FaGavel,
-    href: "/practice-areas/criminal-defense",
-  },
-  {
-    title: "Corporate & Business Law",
-    description:
-      "End-to-end legal solutions for businesses, compliance and corporate governance.",
-    icon: FaBriefcase,
-    href: "/practice-areas/corporate-business-law",
-  },
-  {
-    title: "Real Estate Law",
-    description:
-      "Legal assistance in property transactions, disputes and ownership matters.",
-    icon: FaHome,
-    href: "/practice-areas/real-estate-law",
-  },
-  {
-    title: "Employment & Labour Law",
-    description:
-      "Support for employers and employees on workplace rights, contracts and compliances.",
-    icon: FaHardHat,
-    href: "/practice-areas/employment-labour-law",
-  },
-  {
-    title: "Dispute Resolution",
-    description:
-      "Effective negotiation, mediation and litigation services to resolve legal conflicts.",
-    icon: FaFileAlt,
-    href: "/practice-areas/dispute-resolution",
-  },
-  {
-    title: "Legal Consultation",
-    description:
-      "Expert legal advice to help you make informed and risk-free decisions.",
-    icon: FaShieldAlt,
-    href: "/practice-areas/legal-consultation",
-  },
-];
+const practiceAreas = servicesData.items;
+const practiceIcons: Record<string, typeof FaBalanceScale> = {
+  "balance-scale": FaBalanceScale,
+  users: FaUsers,
+  gavel: FaGavel,
+  briefcase: FaBriefcase,
+  home: FaHome,
+  "hard-hat": FaHardHat,
+  "file-alt": FaFileAlt,
+  shield: FaShieldAlt,
+};
 
 export default function PracticeAreas() {
   const shouldReduceMotion = useReducedMotion();
@@ -102,13 +56,13 @@ export default function PracticeAreas() {
   };
 
   return (
-    <section className="practice-section relative isolate overflow-hidden py-20 sm:py-24 lg:py-28">
+    <section id="practice-area" className="practice-section relative isolate overflow-hidden py-20 sm:py-24 lg:py-28">
 
       {/* BACKGROUND IMAGE */}
       <div
         className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/home/practice-bg.jpg')",
+          backgroundImage: `url('${servicesData.homeImage}')`,
         }}
       />
 
@@ -137,7 +91,7 @@ export default function PracticeAreas() {
             <FaBalanceScale className="text-[29px] text-[#d49b19] sm:text-[36px]" />
 
             <span className="text-[12px] font-bold uppercase tracking-[3px] text-white sm:text-[15px] sm:tracking-[4px]">
-              Our Practice Areas
+              {servicesData.eyebrow}
             </span>
 
             <span className="h-[2px] w-10 bg-gradient-to-l from-transparent to-[#d49b19] sm:w-16" />
@@ -147,10 +101,10 @@ export default function PracticeAreas() {
           {/* MAIN HEADING */}
           <h2 className="mx-auto max-w-[1000px] font-serif text-[34px] font-bold leading-[1.2] text-white sm:text-[43px] md:text-[50px] lg:text-[56px]">
 
-            Comprehensive Legal Services for
+            {servicesData.title}
 
             <span className="mt-1 block bg-gradient-to-r from-[#e3aa28] via-[#ffcf58] to-[#c28b13] bg-clip-text text-transparent">
-              Individuals & Businesses
+              {servicesData.highlight}
             </span>
 
           </h2>
@@ -167,7 +121,10 @@ export default function PracticeAreas() {
         >
 
           {practiceAreas.map((area, index) => {
-            const Icon = area.icon;
+            const Icon = practiceIcons[area.icon];
+            if (!Icon) {
+              throw new Error(`Unknown practice area icon: ${area.icon}`);
+            }
 
             return (
               <motion.div
@@ -176,8 +133,14 @@ export default function PracticeAreas() {
                 className="h-full"
               >
                 <Link
-                  href={area.href}
-                  aria-label={`Explore ${area.title}`}
+                  href={servicesData.practiceAreaHrefTemplate.replace(
+                    "{slug}",
+                    area.slug,
+                  )}
+                  aria-label={servicesData.exploreLabelTemplate.replace(
+                    "{name}",
+                    area.title,
+                  )}
                   className="practice-card group relative flex h-full min-h-[240px] flex-col overflow-hidden rounded-[17px] border border-[#37617b]/70 bg-[#102d42]/65 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#d49b19]/80 hover:bg-[#15364d]/90 hover:shadow-[0_15px_40px_rgba(0,0,0,0.3)] sm:p-7"
                 >
 
@@ -203,7 +166,7 @@ export default function PracticeAreas() {
 
                   {/* DESCRIPTION */}
                   <p className="relative z-10 mt-4 pl-1 text-[14px] leading-[1.65] text-gray-200/90 sm:text-[15px]">
-                    {area.description}
+                    {area.text}
                   </p>
 
                   {/* ARROW BUTTON */}

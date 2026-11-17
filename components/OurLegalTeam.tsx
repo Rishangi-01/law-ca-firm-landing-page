@@ -14,51 +14,15 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { teamPageData } from "@/data";
 
-interface Attorney {
-  id: number;
-  name: string;
-  role: string;
-  image: string;
-  imageAlt: string;
-  icon: LucideIcon;
-  experience?: string;
-}
-
-const attorneys: Attorney[] = [
-  {
-    id: 1,
-    name: "Andrew Mitchell",
-    role: "Managing Partner",
-    image: "/images/andrew-mitchell.png",
-    imageAlt: "Andrew Mitchell, managing partner",
-    icon: Scale
-  },
-  {
-    id: 2,
-    name: "Emily Carter",
-    role: "Senior Attorney",
-    image: "/images/emily-carter.png",
-    imageAlt: "Emily Carter, senior attorney",
-    icon: Gavel
-  },
-  {
-    id: 3,
-    name: "Daniel Brooks",
-    role: "Corporate Law Specialist",
-    image: "/images/daniel-brooks.png",
-    imageAlt: "Daniel Brooks, corporate law specialist",
-    icon: Landmark
-  },
-  {
-    id: 4,
-    name: "Olivia Bennett",
-    role: "Litigation Attorney",
-    image: "/images/olivia-bennett.png",
-    imageAlt: "Olivia Bennett, litigation attorney",
-    icon: UsersRound
-  },
-];
+const attorneys = teamPageData.members.slice(0, 4);
+const attorneyIcons: Record<string, LucideIcon> = {
+  scale: Scale,
+  gavel: Gavel,
+  landmark: Landmark,
+  "users-round": UsersRound,
+};
 
 const containerVariants = {
   hidden: {},
@@ -89,7 +53,7 @@ export default function OurLegalTeam() {
 
   return (
     <section
-      id="our-legal-team"
+      id="team"
       aria-labelledby="legal-team-heading"
       className="relative overflow-hidden bg-[#faf8f4] px-4 py-20 sm:px-6 sm:py-24 lg:px-10 lg:py-28 w-full"
     >
@@ -120,7 +84,7 @@ export default function OurLegalTeam() {
               />
 
               <span className="text-sm font-bold uppercase tracking-[0.12em] text-[#102c3e] sm:text-lg">
-                Our Legal Team
+                {teamPageData.homeSection.eyebrow}
               </span>
             </div>
 
@@ -132,17 +96,15 @@ export default function OurLegalTeam() {
             id="legal-team-heading"
             className="font-serif text-4xl font-bold leading-[1.12] tracking-tight text-[#102c3e] sm:text-5xl md:text-6xl lg:text-[3.4rem]"
           >
-            Meet Our Experienced{" "}
+            {teamPageData.homeSection.title}{" "}
             <span className="text-[#b27a13]">
-              Attorneys
+              {teamPageData.homeSection.highlight}
             </span>
           </h2>
 
       
           <p className="mx-auto mt-3 max-w-6xl text-base leading-relaxed text-[#444b50] sm:text-lg lg:text-xl">
-            A team of dedicated legal professionals with
-            deep expertise, a client-first approach, and
-            a proven record of success.
+            {teamPageData.homeSection.description}
           </p>
 
       
@@ -158,11 +120,18 @@ export default function OurLegalTeam() {
           className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7 xl:gap-8"
         >
           {attorneys.map((attorney) => {
-            const Icon = attorney.icon;
+            const iconId = attorney.icon;
+            if (!iconId) {
+              throw new Error(`Missing legal team icon for: ${attorney.name}`);
+            }
+            const Icon = attorneyIcons[iconId];
+            if (!Icon) {
+              throw new Error(`Unknown legal team icon: ${iconId}`);
+            }
 
             return (
               <motion.article
-                key={attorney.id}
+                key={attorney.name}
                 variants={shouldReduceMotion ? undefined : cardVariants}
                 whileHover={
                   shouldReduceMotion

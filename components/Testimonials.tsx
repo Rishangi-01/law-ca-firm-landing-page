@@ -14,45 +14,16 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { testimonialsSectionData } from "@/data";
 
-interface Testimonial {
-  id: number;
-  name: string;
-  designation: string;
-  review: string;
-  avatar: string;
-  rating: number;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "James Anderson",
-    designation: "Business Owner",
-    review:
-      "Exceptional legal support and a highly professional team. They understood my needs, provided clear guidance, and delivered the right solution on time.",
-    avatar: "/images/customer-michel.webp",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Sophia Williams",
-    designation: "Company Director",
-    review:
-      "From the very first consultation, I felt confident that my case was in the right hands. Their attention to detail and commitment made all the difference.",
-    avatar: "/images/customer-theresa.webp",
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: "Michael Thompson",
-    designation: "Entrepreneur",
-    review:
-      "Professional, responsive, and incredibly knowledgeable. The entire legal process was explained clearly, and the team worked tirelessly to achieve the best outcome.",
-    avatar: "/images/customer-william.webp",
-    rating: 5,
-  },
-];
+const testimonials = testimonialsSectionData.items.slice(0, 3).map((item, id) => ({
+  id,
+  name: item.name,
+  designation: item.treatment,
+  review: item.quote,
+  avatar: item.image,
+  rating: item.rating,
+}));
 
 const testimonialVariants = {
   hidden: {
@@ -136,7 +107,7 @@ export default function Testimonials() {
               />
 
               <span className="text-sm font-bold uppercase tracking-[0.12em] text-white sm:text-lg">
-                Testimonials
+                {testimonialsSectionData.eyebrow}
               </span>
 
               <span className="h-[2px] w-16 bg-[#bd861d] sm:w-24" />
@@ -151,11 +122,10 @@ export default function Testimonials() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="max-w-2xl font-serif text-4xl font-bold leading-[1.15] tracking-tight text-white sm:text-5xl md:text-6xl xl:text-[4rem]"
             >
-              What Our{" "}
+              {testimonialsSectionData.title}{" "}
               <span className="text-[#e5a62e]">
-                Clients
+                {testimonialsSectionData.highlight}
               </span>{" "}
-              Say
             </motion.h2>
 
           
@@ -209,7 +179,10 @@ export default function Testimonials() {
           
                     <div
                       className="flex items-center gap-1"
-                      aria-label={`${activeTestimonial.rating} out of 5 stars`}
+                      aria-label={testimonialsSectionData.ratingLabelTemplate.replace(
+                        "{rating}",
+                        String(activeTestimonial.rating),
+                      )}
                     >
                       {Array.from(
                         { length: activeTestimonial.rating },
@@ -237,7 +210,10 @@ export default function Testimonials() {
                     key={testimonial.id}
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    aria-label={`Show testimonial ${index + 1}`}
+                    aria-label={testimonialsSectionData.showLabelTemplate.replace(
+                      "{number}",
+                      String(index + 1),
+                    )}
                     aria-current={
                       activeIndex === index ? "true" : undefined
                     }
@@ -255,7 +231,7 @@ export default function Testimonials() {
                 <button
                   type="button"
                   onClick={previousTestimonial}
-                  aria-label="Previous testimonial"
+                  aria-label={testimonialsSectionData.previousLabel}
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-white transition-all duration-300 hover:border-[#e5a62e] hover:bg-[#e5a62e] hover:text-[#071d32] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5a62e]"
                 >
                   <ChevronLeft size={20} />
@@ -264,7 +240,7 @@ export default function Testimonials() {
                 <button
                   type="button"
                   onClick={nextTestimonial}
-                  aria-label="Next testimonial"
+                  aria-label={testimonialsSectionData.nextLabel}
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-white transition-all duration-300 hover:border-[#e5a62e] hover:bg-[#e5a62e] hover:text-[#071d32] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e5a62e]"
                 >
                   <ChevronRight size={20} />
@@ -289,8 +265,8 @@ export default function Testimonials() {
             className="group relative min-h-[380px] overflow-hidden sm:min-h-[480px] lg:min-h-full"
           >
             <Image
-              src="/images/testimonial-hero.png"
-              alt="Professional attorney sitting in his office"
+              src={testimonialsSectionData.sideImage}
+              alt={testimonialsSectionData.sideImageAlt}
               fill
               priority
               sizes="(max-width: 1023px) 100vw, 45vw"

@@ -1019,18 +1019,20 @@
         "variants": {
           "InsuranceSite1": {
             "bgImage": "/images/footer-bg.webp",
-            "alt": "Serenova Beauty and Spa",
-            "name": "Serenova Beauty and Spa",
+            "alt": "LexWell Law Firm",
+            "name": "LexWell Law Firm",
+            "homeHref": "/",
+            "homeAriaLabelTemplate": "{name} Home",
             "language": "en",
-            "description": "Experience premium beauty and spa treatments designed to refresh your body, mind and skin.",
-            "logo": "/images/serenova-logo.webp",
-            "logoWhite": "/images/serenova-logo.webp",
-            "heroImage": "/images/hero-bg.webp",
-            "heroImageAlt": "Beauty & Wellness Spa",
+            "description": "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals.",
+            "logo": "/images/white-logo.webp",
+            "logoWhite": "/images/logo.webp",
+            "heroImage": "/images/legal-hero-bg.webp",
+            "heroImageAlt": "LexWell Law Firm legal services",
             "breadcrumbLabel": "Breadcrumb",
             "metadata": {
-              "title": "Serenova Beauty and Spa | Beauty & Wellness",
-              "description": "Experience premium beauty and spa treatments designed to refresh your body, mind and skin.",
+              "title": "LexWell Law Firm | Legal Services",
+              "description": "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals.",
               "icon": "/favicon.webp"
             },
             "decorativeAssets": {
@@ -1045,11 +1047,11 @@
               "bottomRightSpa": "/images/bottom-right-spa.webp"
             },
             "mobileMenu": {
-              "openLabel": "Open navigation menu",
-              "closeLabel": "Close navigation menu",
+              "openLabel": "Open menu",
+              "closeLabel": "Close menu",
               "contactLabel": "Contact Us",
               "contactHref": "#contact",
-              "appointmentLabel": "Make An Appointment",
+              "appointmentLabel": "Book a Consultation",
               "appointmentHref": "#contact",
               "ariaLabel": "Mobile navigation",
               "phoneLabel": "+1 00000000",
@@ -1058,8 +1060,8 @@
               "emailHref": "mailto:info@XYZ.com"
             },
             "addressLines": [
-              "742 Evergreen Terrace,",
-              "Springfield, 62704, United States"
+              "742 Evergreen Terrace (or 123 Main St),",
+              "Springfield, IL (Illinois), 62704, United States"
             ],
             "emails": [
               "info@XYZ.com"
@@ -1070,7 +1072,7 @@
             "callLabel": "Call Us",
             "bannerImage": "/images/appointment-bg.webp",
             "bannerImageAlt": "Make An Appointment",
-            "footerImageAlt": "Serenova Beauty and Spa",
+            "footerImageAlt": "LexWell Law Firm",
             "socials": [
               {
                 "icon": "facebook",
@@ -1083,22 +1085,22 @@
                 "href": "https://instagram.com"
               },
               {
+                "icon": "linkedin",
+                "label": "LinkedIn",
+                "href": "https://linkedin.com"
+              },
+              {
                 "icon": "youtube",
                 "label": "YouTube",
                 "href": "https://youtube.com"
-              },
-              {
-                "icon": "whatsapp",
-                "label": "WhatsApp",
-                "href": "https://whatsapp.com"
               }
             ],
             "hours": [
               {
-                "days": "Mon - Sat",
+                "days": "Mon – Sat",
                 "daysShort": "Mon - Sat",
                 "timeSeparator": " : ",
-                "time": "10:00 AM - 8:00 PM"
+                "time": "9:00 AM – 8:00 PM"
               },
               {
                 "days": "Sunday",
@@ -1116,24 +1118,28 @@
             "links": [
               {
                 "label": "Home",
-                "href": "/"
+                "href": "#home"
               },
               {
                 "label": "About Us",
                 "href": "#about"
               },
               {
-                "label": "Services",
-                "href": "#services",
+                "label": "Practice Area",
+                "href": "#practice-area",
                 "dropdown": false
-              },
-              {
-                "label": "Gallery",
-                "href": "#gallery"
               },
               {
                 "label": "Our Team",
                 "href": "#team"
+              },
+              {
+                "label": "Testimonials",
+                "href": "#testimonials"
+              },
+              {
+                "label": "FAQs",
+                "href": "#faqs"
               },
               {
                 "label": "Contact Us",
@@ -1141,7 +1147,7 @@
               }
             ],
             "button": {
-              "label": "Make An Appointment",
+              "label": "Book a Consultation",
               "href": "#contact"
             }
           }
@@ -1157,22 +1163,22 @@
             },
             "slides": [
               {
-                "eyebrow": "Beauty & Wellness Spa",
+                "eyebrow": "LexWell Law Firm",
                 "title": [
-                  "Relax, Rejuvenate",
-                  "&",
-                  "Enhance Your Beauty"
+                  "Your Trusted Legal Partner",
+                  "for",
+                  "Comprehensive Legal Solutions"
                 ],
-                "text": "Experience premium beauty and spa treatments designed to refresh your body, mind and skin.",
-                "image": "/images/hero-bg.webp",
-                "imageAlt": "Beauty & Wellness Spa",
+                "text": "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals.",
+                "image": "/images/legal-hero-bg.webp",
+                "imageAlt": "LexWell Law Firm legal services",
                 "button": {
-                  "label": "Book An Appointment",
-                  "href": "/contact"
+                  "label": "Book a Consultation",
+                  "href": "#contact"
                 },
                 "secondaryButton": {
-                  "label": "Explore Services",
-                  "href": "/services"
+                  "label": "Practice Area",
+                  "href": "#practice-area"
                 }
               },
               {
@@ -1204,34 +1210,34 @@
           "InsuranceHighlights1": {
             "items": [
               {
-                "icon": "microscope",
-                "title": "Haircut",
-                "text": "Classic and modern haircuts to suit your style and personality."
+                "icon": "shield",
+                "title": "Expert Legal Advice",
+                "text": "Trusted guidance for every legal matter."
+              },
+              {
+                "icon": "gavel",
+                "title": "Strong Representation",
+                "text": "Dedicated advocacy for your rights."
+              },
+              {
+                "icon": "users",
+                "title": "Client-Focused Approach",
+                "text": "Personalized solutions that put you first."
               },
               {
                 "icon": "heart-pulse",
-                "title": "Hairdryer",
-                "text": "Professional hair drying and styling for a smooth, polished look."
+                "title": "10+ Years of Experience",
+                "text": "We provide strategic legal advice and strong representation."
               },
               {
                 "icon": "baby",
-                "title": "Hair Coloring",
-                "text": "Enhance your look with vibrant, long-lasting hair color treatments."
-              },
-              {
-                "icon": "heart-pulse",
-                "title": "Hair Style",
-                "text": "Trendy and personalized hairstyles for every occasion."
-              },
-              {
-                "icon": "baby",
-                "title": "Hair Spa",
-                "text": "Experience a wide range of professional beauty and wellness treatments designed to refresh, rejuvenate and enhance your natural glow."
+                "title": "500+ Clients Served",
+                "text": "A team of dedicated legal professionals with deep expertise, a client-first approach, and a proven record of success."
               },
               {
                 "icon": "scan",
-                "title": "Facial Treatment",
-                "text": "Experience a wide range of professional beauty and wellness treatments designed to refresh, rejuvenate and enhance your natural glow."
+                "title": "95% Success Rate",
+                "text": "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals."
               }
             ]
           }
@@ -1240,37 +1246,37 @@
       "About": {
         "variants": {
           "InsuranceAbout1": {
-            "heroTitle": "About",
+            "heroTitle": "About Us",
             "homeSection": {
-              "eyebrow": "About Serenova",
+              "eyebrow": "ABOUT US",
               "title": [
-                "Your Destination for",
-                "Beauty, Relaxation",
-                "& Wellness"
+                "A Trusted",
+                "Law Firm",
+                "for Your"
               ],
               "features": [
                 {
-                  "title": "Expert Care",
+                  "title": "Expert Legal Advice",
                   "color": "pink"
                 },
                 {
-                  "title": "Premium Treatments",
+                  "title": "Strong Representation",
                   "color": "pink"
                 },
                 {
-                  "title": "Relaxing Ambience",
+                  "title": "Client-Focused Approach",
                   "color": "pink"
                 },
                 {
-                  "title": "Refresh Your Body",
+                  "title": "Your Trusted Partner in",
                   "color": "green"
                 },
                 {
-                  "title": "10+ Years of Experience",
+                  "title": "Legal Excellence.",
                   "color": "green"
                 },
                 {
-                  "title": "25+ Beauty Experts",
+                  "title": "Legal Needs",
                   "color": "green"
                 }
               ],
@@ -1283,29 +1289,29 @@
                   "height": 55
                 },
                 {
-                  "value": "25+",
-                  "label": "Beauty Experts",
+                  "value": "500+",
+                  "label": "Clients Served",
                   "icon": "/images/experts-icon.webp",
                   "width": 60,
                   "height": 60
                 }
               ],
-              "sealImage": "/images/about-seal.webp",
-              "sealImageAlt": "Beauty and Spa Since 2015",
+              "sealImage": "/images/about-logo.webp",
+              "sealImageAlt": "",
               "button": {
                 "label": "Read More",
                 "href": "#about"
               }
             },
-            "eyebrow": "About Serenova",
-            "title": "Your Destination for",
-            "highlight": "Beauty, Relaxation & Wellness",
-            "mainImage": "/images/about-massage.webp",
-            "mainImageAlt": "Relaxing luxury spa massage treatment",
+            "eyebrow": "ABOUT US",
+            "title": "A Trusted Law Firm for Your",
+            "highlight": "Legal Needs.",
+            "mainImage": "/images/lady-justice_.webp",
+            "mainImageAlt": "Lady Justice statue and legal books",
             "familyImage": "/images/about-facial.webp",
             "familyImageAlt": "Premium facial and skincare spa treatment",
-            "homeText": "At Serenova, we believe that beauty is a reflection of overall wellness. Our expert care, premium treatments and relaxing ambience are designed to rejuvenate your body, mind and skin.",
-            "homeText2": "At Serenova, we believe that beauty is a reflection of overall wellness. Our expert care, premium treatments and relaxing ambience are designed to rejuvenate your body, mind and skin.",
+            "homeText": "We are a client-focused law firm committed to delivering practical, result-oriented legal solutions with integrity, professionalism, and a deep understanding of your needs.",
+            "homeText2": "We are a client-focused law firm committed to delivering practical, result-oriented legal solutions with integrity, professionalism, and a deep understanding of your needs.",
             "experience": {
               "value": "10+",
               "label": [
@@ -1316,13 +1322,13 @@
             "points": [
               {
                 "icon": "heart-pulse",
-                "title": "Premium Treatments",
-                "text": "Designed to rejuvenate your body, mind and skin"
+                "title": "Expert Legal Advice",
+                "text": "Trusted guidance for every legal matter."
               },
               {
                 "icon": "user-round",
-                "title": "Beauty Experts",
-                "text": "25+ Beauty Experts"
+                "title": "Strong Representation",
+                "text": "Dedicated advocacy for your rights."
               }
             ],
             "button": {
@@ -1362,95 +1368,97 @@
         "variants": {
           "InsuranceWhyChooseUs1": {
             "eyebrow": "WHY CHOOSE US",
-            "title": "Having Trouble",
-            "titleLine2": "Getting",
-            "highlight": "Pregnant?",
-            "text": "We combine advanced reproductive care with a compassionate approach to help you achieve your dream of parenthood through personalized treatment plans.",
-            "image": "/images/home/why-choose-us.webp",
-            "imageAlt": "Happy parents enjoying time with their baby",
+            "title": "Your Trusted",
+            "titleLine2": "Legal Partner",
+            "highlight": "for Comprehensive Solutions",
+            "text": "We offer expert legal counsel, strong representation, and practical solutions tailored to your unique needs, ensuring protection of your rights and long-term peace of mind.",
+            "image": "/images/lady-justice_.webp",
+            "imageAlt": "Lady Justice statue with golden scales and judge's gavel",
+            "badgeImage": "/trusted-legal-badge.png",
+            "badgeImageAlt": "Trusted Legal Partner badge",
             "items": [
               {
-                "icon": "heart-pulse",
+                "icon": "balance-scale",
                 "title": [
-                  "Personalized Treatment",
-                  "Plans"
+                  "Expert Legal",
+                  "Advice"
                 ],
                 "text": [
-                  "Every family has a unique journey. We",
-                  "create personalized fertility care plans based on",
-                  "your individual needs, health and goals."
+                  "Trusted guidance for",
+                  "every legal",
+                  "matter."
                 ]
               },
               {
                 "icon": "user-round",
                 "title": [
-                  "Advanced Fertility",
-                  "Solutions"
+                  "Strong",
+                  "Representation"
                 ],
                 "text": [
-                  "We use the latest reproductive technology",
-                  "and evidence-based treatments to provide comprehensive",
-                  "support throughout your fertility journey."
+                  "Dedicated",
+                  "advocacy for",
+                  "your rights."
                 ]
               },
               {
-                "icon": "monitor-check",
+                "icon": "users",
                 "title": [
-                  "Experienced &",
-                  "Caring Specialists"
+                  "Client-Focused",
+                  "Approach"
                 ],
                 "text": [
-                  "Our experienced fertility specialists provide",
-                  "professional guidance, compassionate care and",
-                  "support at every step."
+                  "Personalized",
+                  "solutions that put",
+                  "you first."
                 ]
               },
               {
                 "icon": "users-round",
                 "title": [
-                  "Comprehensive",
-                  "Support"
+                  "A Team of Experienced",
+                  "& Skilled Attorneys"
                 ],
                 "text": [
-                  "From your first consultation to ongoing",
-                  "care, our team is here to",
-                  "make your experience comfortable and supportive."
+                  "A team of dedicated",
+                  "legal professionals with",
+                  "deep expertise."
                 ]
               },
               {
                 "icon": "microscope",
                 "title": [
-                  "Expert",
-                  "Doctors"
+                  "Tailored Strategies for",
+                  "Individuals & Businesses"
                 ],
                 "text": [
-                  "Consult with",
-                  "experienced",
-                  "gynecologists."
+                  "Tailored strategies",
+                  "for individuals and",
+                  "businesses."
                 ]
               },
               {
                 "icon": "shield-check",
                 "title": [
-                  "Flexible",
-                  "Scheduling"
+                  "Commitment to",
+                  "Confidentiality & Integrity"
                 ],
                 "text": [
-                  "Choose a",
-                  "convenient date",
-                  "and time."
+                  "Commitment to",
+                  "confidentiality and",
+                  "integrity."
                 ]
               }
             ],
             "homeItemCount": 4,
-            "homeTreatmentTitle": "Comprehensive Fertility Care",
+            "homeTreatmentTitle": "Comprehensive Legal Services",
             "homeTreatments": [
-              "IVF (In Vitro Fertilization)",
-              "IUI (Intrauterine Insemination)",
-              "Egg Freezing",
-              "Personalized Treatment Plan",
-              "Male Fertility Treatment",
-              "Egg Retrieval & Fertilization"
+              "Civil Law",
+              "Family Law",
+              "Criminal Defense",
+              "Corporate & Business Law",
+              "Real Estate Law",
+              "Employment & Labour Law"
             ]
           }
         }
@@ -1458,254 +1466,256 @@
       "Plans": {
         "variants": {
           "InsurancePlans1": {
-            "heroTitle": "Our Services",
-            "eyebrow": "Our Services",
-            "title": "Premium Beauty &",
-            "highlight": "Spa Services",
-            "text": "Experience a wide range of professional beauty and wellness treatments designed to refresh, rejuvenate and enhance your natural glow.",
-            "buttonLabel": "Explore Services",
+            "heroTitle": "Our Practice Areas",
+            "eyebrow": "Our Practice Areas",
+            "title": "Comprehensive Legal Services for",
+            "highlight": "Individuals & Businesses",
+            "text": "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals.",
+            "buttonLabel": "Explore Practice Areas",
             "serviceDetailsHref": "/services/service-detail",
             "learnMoreLabelTemplate": "Learn more about {name}",
-            "homeCount": 4,
-            "homeImage": "/images/haircut.webp",
+            "homeCount": 8,
+            "homeImage": "/images/home/practice-bg.jpg",
             "homeImageAlt": "Haircut",
+            "practiceAreaHrefTemplate": "/practice-areas/{slug}",
+            "exploreLabelTemplate": "Explore {name}",
             "homeServiceSlugs": [
-              "maternity-care",
-              "gynecology",
-              "pediatric-care",
-              "radiology",
-              "physiotherapy"
+              "civil-law",
+              "family-law",
+              "criminal-defense",
+              "corporate-business-law",
+              "real-estate-law"
             ],
             "treatmentCardCount": 2,
             "treatmentHeading": [
-              "Premium Beauty &",
-              "Spa Services"
+              "Comprehensive Legal Services",
+              "Individuals & Businesses"
             ],
             "items": [
               {
-                "slug": "ivf-treatment",
-                "title": "Haircut",
-                "icon": "/images/haircut-icon.webp",
+                "slug": "civil-law",
+                "title": "Civil Law",
+                "icon": "balance-scale",
                 "homeIcon": "/images/haircut-icon.webp",
-                "text": "Classic and modern haircuts to suit your style and personality.",
+                "text": "Legal support for disputes related to property, contracts and personal matters.",
                 "lines": [
-                  "Classic and modern haircuts to",
-                  "suit your style and personality."
+                  "Legal support for disputes related to",
+                  "property, contracts and personal matters."
                 ],
                 "homeText": [
-                  "Classic and modern haircuts",
-                  "to suit your style and",
-                  "personality."
+                  "Legal support for disputes",
+                  "related to property, contracts",
+                  "and personal matters."
                 ],
                 "image": "/images/haircut.webp",
                 "homeImage": "/images/haircut.webp",
-                "treatmentImageAlt": "Haircut",
+                "treatmentImageAlt": "Civil Law",
                 "detailImage": "/images/haircut.webp",
                 "relatedText": [
-                  "Classic and modern haircuts",
-                  "to suit your style and personality."
+                  "Legal support for disputes related to",
+                  "property, contracts and personal matters."
                 ],
                 "overview": [
-                  "Classic and modern haircuts to suit your style and personality.",
-                  "Experience a wide range of professional beauty and wellness treatments designed to refresh, rejuvenate and enhance your natural glow."
+                  "Legal support for disputes related to property, contracts and personal matters.",
+                  "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals."
                 ]
               },
               {
-                "slug": "iui-treatment",
-                "title": "Hairdryer",
-                "icon": "/images/hairdryer-icon.webp",
+                "slug": "family-law",
+                "title": "Family Law",
+                "icon": "users",
                 "homeIcon": "/images/hairdryer-icon.webp",
-                "text": "Professional hair drying and styling for a smooth, polished look.",
+                "text": "Guidance on marriage, divorce, child custody and family-related legal matters.",
                 "lines": [
-                  "Professional hair drying and styling",
-                  "for a smooth, polished look."
+                  "Guidance on marriage, divorce,",
+                  "child custody and family-related legal matters."
                 ],
                 "homeText": [
-                  "Professional hair drying and",
-                  "styling for a smooth,",
-                  "polished look."
+                  "Guidance on marriage,",
+                  "divorce, child custody and",
+                  "family-related legal matters."
                 ],
                 "image": "/images/hairdryer.webp",
                 "homeImage": "/images/hairdryer.webp",
-                "treatmentImageAlt": "Hairdryer",
+                "treatmentImageAlt": "Family Law",
                 "thumb": "/images/hairdryer.webp",
                 "relatedText": [
-                  "Professional hair drying and styling",
-                  "for a smooth, polished look."
+                  "Guidance on marriage, divorce,",
+                  "child custody and family-related legal matters."
                 ],
                 "overview": [
-                  "Professional hair drying and styling for a smooth, polished look.",
-                  "Experience a wide range of professional beauty and wellness treatments designed to refresh, rejuvenate and enhance your natural glow."
+                  "Guidance on marriage, divorce, child custody and family-related legal matters.",
+                  "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals."
                 ]
               },
               {
-                "slug": "maternity-care",
-                "title": "Hair Coloring",
-                "icon": "/images/coloring-icon.webp",
+                "slug": "criminal-defense",
+                "title": "Criminal Defense",
+                "icon": "gavel",
                 "homeIcon": "/images/coloring-icon.webp",
-                "text": "Enhance your look with vibrant, long-lasting hair color treatments.",
+                "text": "Strong representation in criminal cases to protect your rights and ensure a fair trial.",
                 "lines": [
-                  "Enhance your look with vibrant,",
-                  "long-lasting hair color",
-                  "treatments."
+                  "Strong representation in criminal",
+                  "cases to protect your rights",
+                  "and ensure a fair trial."
                 ],
                 "homeText": [
-                  "Enhance your look with vibrant,",
-                  "long-lasting hair color",
-                  "treatments."
+                  "Strong representation in criminal",
+                  "cases to protect your rights",
+                  "and ensure a fair trial."
                 ],
                 "image": "/images/hair-coloring.webp",
                 "homeImage": "/images/hair-coloring.webp",
-                "homeImageAlt": "Hair Coloring",
+                "homeImageAlt": "Criminal Defense",
                 "thumb": "/images/hair-coloring.webp",
                 "relatedText": [
-                  "Enhance your look with vibrant,",
-                  "long-lasting hair color treatments."
+                  "Strong representation in criminal cases",
+                  "to protect your rights and ensure a fair trial."
                 ],
                 "overview": [
-                  "Enhance your look with vibrant, long-lasting hair color treatments.",
-                  "Experience a wide range of professional beauty and wellness treatments designed to refresh, rejuvenate and enhance your natural glow."
+                  "Strong representation in criminal cases to protect your rights and ensure a fair trial.",
+                  "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals."
                 ]
               },
               {
-                "slug": "gynecology",
-                "title": "Hair Style",
-                "icon": "/images/hairstyle-icon.webp",
+                "slug": "corporate-business-law",
+                "title": "Corporate & Business Law",
+                "icon": "briefcase",
                 "homeIcon": "/images/hairstyle-icon.webp",
-                "text": "Trendy and personalized hairstyles for every occasion.",
+                "text": "End-to-end legal solutions for businesses, compliance and corporate governance.",
                 "lines": [
-                  "Trendy and personalized",
-                  "hairstyles for every occasion.",
-                  "family with confidence."
+                  "End-to-end legal solutions",
+                  "for businesses, compliance and",
+                  "corporate governance."
                 ],
                 "homeText": [
-                  "Trendy and personalized",
-                  "hairstyles for every",
-                  "occasion."
+                  "End-to-end legal solutions",
+                  "for businesses, compliance and",
+                  "corporate governance."
                 ],
                 "image": "/images/hair-style.webp",
                 "homeImage": "/images/hair-style.webp",
-                "homeImageAlt": "Hair Style",
+                "homeImageAlt": "Corporate & Business Law",
                 "thumb": "/images/hair-style.webp",
                 "relatedText": [
-                  "Trendy and personalized hairstyles",
-                  "for every occasion."
+                  "End-to-end legal solutions for",
+                  "businesses, compliance and corporate governance."
                 ],
                 "overview": [
-                  "Trendy and personalized hairstyles for every occasion.",
-                  "Experience a wide range of professional beauty and wellness treatments designed to refresh, rejuvenate and enhance your natural glow."
+                  "End-to-end legal solutions for businesses, compliance and corporate governance.",
+                  "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals."
                 ]
               },
               {
-                "slug": "pediatric-care",
-                "title": "Contraceptive Counseling",
-                "icon": "baby",
+                "slug": "real-estate-law",
+                "title": "Real Estate Law",
+                "icon": "home",
                 "homeIcon": "baby",
-                "text": "Personalized guidance on safe and effective contraception options.",
+                "text": "Legal assistance in property transactions, disputes and ownership matters.",
                 "lines": [
-                  "Personalized guidance on",
-                  "safe and effective",
-                  "contraception options."
+                  "Legal assistance in property",
+                  "transactions, disputes and",
+                  "ownership matters."
                 ],
                 "homeText": [
-                  "Personalized guidance on",
-                  "safe and effective",
-                  "contraception options."
+                  "Legal assistance in property",
+                  "transactions, disputes and",
+                  "ownership matters."
                 ],
                 "image": "/images/home/contraceptive-counseling.webp",
                 "homeImage": "/images/home/contraceptive-counseling.webp",
-                "homeImageAlt": "Contraceptive Counseling",
+                "homeImageAlt": "Real Estate Law",
                 "thumb": "/images/home/contraceptive-counseling.webp",
                 "relatedText": [
-                  "Personalized guidance on safe",
-                  "and effective contraception options."
+                  "Legal assistance in property transactions,",
+                  "disputes and ownership matters."
                 ],
                 "overview": [
-                  "Personalized guidance on safe and effective contraception options.",
-                  "Every journey is personal. Take the first step toward understanding your fertility and reproductive health with compassionate, professional guidance."
+                  "Legal assistance in property transactions, disputes and ownership matters.",
+                  "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals."
                 ]
               },
               {
-                "slug": "radiology",
-                "title": "PCOS Management",
-                "icon": "scan",
+                "slug": "employment-labour-law",
+                "title": "Employment & Labour Law",
+                "icon": "hard-hat",
                 "homeIcon": "scan",
-                "text": "Comprehensive care for PCOS with lifestyle, medication and long-term support.",
+                "text": "Support for employers and employees on workplace rights, contracts and compliances.",
                 "lines": [
-                  "Comprehensive care for PCOS",
-                  "with lifestyle, medication",
-                  "and long-term support."
+                  "Support for employers and",
+                  "employees on workplace rights,",
+                  "contracts and compliances."
                 ],
                 "homeText": [
-                  "Comprehensive care for PCOS",
-                  "with lifestyle, medication",
-                  "and long-term support."
+                  "Support for employers and",
+                  "employees on workplace rights,",
+                  "contracts and compliances."
                 ],
                 "image": "/images/home/pcos-management.webp",
                 "homeImage": "/images/home/pcos-management.webp",
-                "homeImageAlt": "PCOS Management",
+                "homeImageAlt": "Employment & Labour Law",
                 "relatedText": [
-                  "Comprehensive care for PCOS with",
-                  "lifestyle, medication and long-term support."
+                  "Support for employers and employees",
+                  "on workplace rights, contracts and compliances."
                 ],
                 "overview": [
-                  "Comprehensive care for PCOS with lifestyle, medication and long-term support.",
-                  "Every journey is personal. Take the first step toward understanding your fertility and reproductive health with compassionate, professional guidance."
+                  "Support for employers and employees on workplace rights, contracts and compliances.",
+                  "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals."
                 ]
               },
               {
-                "slug": "physiotherapy",
-                "title": "IVF & IUI Treatment",
-                "icon": "activity",
+                "slug": "dispute-resolution",
+                "title": "Dispute Resolution",
+                "icon": "file-alt",
                 "homeIcon": "activity",
-                "text": "Advanced reproductive technologies to turn your parenthood dreams into reality.",
+                "text": "Effective negotiation, mediation and litigation services to resolve legal conflicts.",
                 "lines": [
-                  "Advanced reproductive technologies to",
-                  "turn your parenthood",
-                  "dreams into reality."
+                  "Effective negotiation, mediation",
+                  "and litigation services to",
+                  "resolve legal conflicts."
                 ],
                 "homeText": [
-                  "Advanced reproductive technologies to",
-                  "turn your parenthood",
-                  "dreams into reality."
+                  "Effective negotiation, mediation",
+                  "and litigation services to",
+                  "resolve legal conflicts."
                 ],
                 "image": "/images/home/ivf-iui-treatment.webp",
                 "homeImage": "/images/home/ivf-iui-treatment.webp",
-                "homeImageAlt": "IVF & IUI Treatment",
+                "homeImageAlt": "Dispute Resolution",
                 "relatedText": [
-                  "Advanced reproductive technologies to turn",
-                  "your parenthood dreams into reality."
+                  "Effective negotiation, mediation and",
+                  "litigation services to resolve legal conflicts."
                 ],
                 "overview": [
-                  "Advanced reproductive technologies to turn your parenthood dreams into reality.",
-                  "Every journey is personal. Take the first step toward understanding your fertility and reproductive health with compassionate, professional guidance."
+                  "Effective negotiation, mediation and litigation services to resolve legal conflicts.",
+                  "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals."
                 ]
               },
               {
-                "slug": "pcos-reproductive-health",
-                "title": "Menopause Care",
-                "icon": "heart-pulse",
+                "slug": "legal-consultation",
+                "title": "Legal Consultation",
+                "icon": "shield",
                 "homeIcon": "heart-pulse",
-                "text": "Supportive care to manage hormonal changes and maintain a healthy life.",
+                "text": "Expert legal advice to help you make informed and risk-free decisions.",
                 "lines": [
-                  "Supportive care to manage",
-                  "hormonal changes and maintain",
-                  "a healthy life."
+                  "Expert legal advice to help",
+                  "you make informed and",
+                  "risk-free decisions."
                 ],
                 "homeText": [
-                  "Supportive care to manage",
-                  "hormonal changes and maintain",
-                  "a healthy life."
+                  "Expert legal advice to help",
+                  "you make informed and",
+                  "risk-free decisions."
                 ],
                 "image": "/images/home/menopause-care.webp",
                 "homeImage": "/images/home/menopause-care.webp",
                 "relatedText": [
-                  "Supportive care to manage hormonal changes",
-                  "and maintain a healthy life."
+                  "Expert legal advice to help you",
+                  "make informed and risk-free decisions."
                 ],
                 "overview": [
-                  "Supportive care to manage hormonal changes and maintain a healthy life.",
-                  "Every journey is personal. Take the first step toward understanding your fertility and reproductive health with compassionate, professional guidance."
+                  "Expert legal advice to help you make informed and risk-free decisions.",
+                  "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals."
                 ]
               }
             ]
@@ -1995,24 +2005,24 @@
             ],
             "items": [
               {
-                "icon": "/images/experience.webp",
-                "value": "26+",
+                "icon": "award",
+                "value": "10+",
                 "label": "Years of Experience"
               },
               {
-                "icon": "/images/natural-products.webp",
-                "value": "100%",
-                "label": "Natural Products"
+                "icon": "users",
+                "value": "500+",
+                "label": "Clients Served"
               },
               {
-                "icon": "/images/clients.webp",
-                "value": "56k+",
-                "label": "Satisfied Clients"
+                "icon": "gavel",
+                "value": "95%",
+                "label": "Success Rate"
               },
               {
-                "icon": "/images/specialists.webp",
-                "value": "36+",
-                "label": "Specialists Team"
+                "icon": "users",
+                "value": "4",
+                "label": "Legal Team Members"
               }
             ]
           }
@@ -2024,14 +2034,15 @@
             "heroTitle": "Testimonials",
             "ariaLabel": "Customer testimonials",
             "eyebrow": "Testimonials",
-            "title": "Our Customer",
-            "highlight": "Feedback",
+            "title": "What Our",
+            "highlight": "Clients Say",
             "storyLabel": "A personal story",
             "ratingLabel": "Illustrative five-star rating",
             "previousLabel": "Previous testimonial",
             "nextLabel": "Next testimonial",
             "showLabelTemplate": "Show testimonial {number}",
-            "text": "Real experiences from our valued clients who love our care, service, and results.",
+            "ratingLabelTemplate": "{rating} out of 5 stars",
+            "text": "Exceptional legal support and a highly professional team.",
             "averageRating": "5.0",
             "decorativeSymbol": "\u2667",
             "quoteMark": "\u201c",
@@ -2041,35 +2052,35 @@
               "Reviewed by",
               "Google"
             ],
-            "sideImage": "/images/testimonial-spa.webp",
-            "sideImageAlt": "Woman enjoying a relaxing spa massage",
+            "sideImage": "/images/testimonial-hero.webp",
+            "sideImageAlt": "Professional attorney sitting in his office",
             "items": [
               {
-                "name": "Pooja Sharma",
+                "name": "James Anderson",
                 "city": "New Delhi, India",
-                "treatment": "Happy Customer",
-                "rating": 5,
-                "image": "/images/testimonial-pooja.webp",
-                "imageAlt": "Pooja Sharma",
-                "quote": "I had an amazing spa experience here. The environment is so calm and relaxing, and the staff is very professional. The massage therapy truly refreshed my body and mind. Highly recommended!"
-              },
-              {
-                "name": "Michel Mehta",
-                "city": "Noida, India",
-                "treatment": "Valued Customer",
+                "treatment": "Business Owner",
                 "rating": 5,
                 "image": "/images/customer-michel.webp",
-                "imageAlt": "Michel Mehta",
-                "quote": "A wonderful experience from beginning to end. The atmosphere is peaceful, the therapists are professional, and every treatment feels special. I truly enjoyed my visit!"
+                "imageAlt": "James Anderson",
+                "quote": "Exceptional legal support and a highly professional team. They understood my needs, provided clear guidance, and delivered the right solution on time."
               },
               {
-                "name": "Theresa Verma",
-                "city": "Gurugram, India",
-                "treatment": "Regular Customer",
+                "name": "Sophia Williams",
+                "city": "Noida, India",
+                "treatment": "Company Director",
                 "rating": 5,
                 "image": "/images/customer-theresa.webp",
-                "imageAlt": "Theresa Verma",
-                "quote": "The perfect place to relax and unwind. The service was excellent, the ambience was beautiful, and the entire experience was refreshing. I would definitely recommend Serenova!"
+                "imageAlt": "Sophia Williams",
+                "quote": "From the very first consultation, I felt confident that my case was in the right hands. Their attention to detail and commitment made all the difference."
+              },
+              {
+                "name": "Michael Thompson",
+                "city": "Gurugram, India",
+                "treatment": "Entrepreneur",
+                "rating": 5,
+                "image": "/images/customer-william.webp",
+                "imageAlt": "Michael Thompson",
+                "quote": "Professional, responsive, and incredibly knowledgeable. The entire legal process was explained clearly, and the team worked tirelessly to achieve the best outcome."
               },
               {
                 "name": "Meera & Rahul",
@@ -2087,15 +2098,15 @@
       "Cta": {
         "variants": {
           "InsuranceCta1": {
-            "eyebrow": "Make An Appointment",
+            "eyebrow": "Book a Consultation",
             "title": [
-              "Relax Anytime",
-              "Any Day"
+              "Your Trusted Legal",
+              "Partner"
             ],
-            "text": "Book your appointment today and experience personalised care, relaxation, and complete wellness.",
-            "image": "/images/appointment-bg.webp",
+            "text": "We provide strategic legal advice, strong representation, and personalized solutions to protect your rights, resolve disputes, minimize risks, and achieve your goals.",
+            "image": "/images/contact-legal.webp",
             "button": {
-              "label": "Make An Appointment",
+              "label": "Book a Consultation",
               "href": "#contact"
             }
           }
@@ -2426,13 +2437,14 @@
       "ContactPage": {
         "variants": {
           "InsuranceContactPage1": {
-            "eyebrow": "GET IN TOUCH",
+            "backgroundImage": "/images/lady-justice-bg.webp",
+            "eyebrow": "Contact Us",
             "title": [
-              "We're Here to",
-              "Support Your"
+              "Feel Free to",
+              "Write Us"
             ],
-            "highlight": "Journey",
-            "text": "Have a question or want to book an appointment? Fill out the form and our team will get back to you shortly.",
+            "highlight": "Anytime",
+            "text": "Have a legal question or need professional advice? Our team is here to help you.",
             "cards": [
               {
                 "icon": "phone-solid",
@@ -2450,16 +2462,36 @@
                 "field": "address"
               }
             ],
+            "contactInfo": {
+              "phones": [
+                {
+                  "label": "+1 00000000",
+                  "href": "tel:+1 00000000"
+                }
+              ],
+              "email": {
+                "label": "info@lawfirm.com",
+                "href": "mailto:info@lawfirm.com"
+              },
+              "website": {
+                "label": "www.lawfirm.com",
+                "href": "https://lawfirm.com"
+              },
+              "addressLines": [
+                "123, Legal Avenue, Sector 62,",
+                "Noida, Uttar Pradesh – 201301"
+              ]
+            },
             "formTitle": "Send Us a",
             "formHighlight": "Message",
-            "formText": "We are here to help you with personalized guidance and support.",
+            "formText": "Have a legal question or need professional advice? Our team is here to help you.",
             "detailsTitle": [
               "Get in Touch",
               "With Us"
             ],
-            "detailsText": "We'd love to hear from you. Reach out to our team for appointments, inquiries or any assistance related to women's health and fertility care.",
-            "sectionImage": "/images/home/gynecology-care.webp",
-            "sectionImageAlt": "Doctor providing pregnancy care and consultation to an expecting mother",
+            "detailsText": "Have a legal question or need professional advice? Our team is here to help you.",
+            "sectionImage": "/images/contact-legal.webp",
+            "sectionImageAlt": "Judge's gavel and golden scales of justice",
             "location": {
               "mapCard": {
                 "title": "Visit Our Location",
@@ -2472,8 +2504,8 @@
             "hero": {
               "breadcrumbLabel": "Breadcrumb",
               "image": {
-                "src": "/images/banner.webp",
-                "alt": "A happy baby receiving loving medical care"
+                "src": "/images/contact-legal.webp",
+                "alt": "Judge's gavel and golden scales of justice"
               },
               "heading": "Contact Us",
               "homeLabel": "Home",
@@ -2482,35 +2514,52 @@
             },
             "form": {
               "heading": "Send Us a Message",
-              "mobileEyebrow": "GET IN TOUCH",
+              "mobileEyebrow": "Contact Us",
               "requiredMarker": "*",
               "emailLabel": "Email us",
               "emailValue": "info@XYZ.com",
               "phoneLabel": "Call us",
               "phoneValue": "+1 00000000",
-              "backgroundImage": "/images/banner.webp",
-              "backgroundImageAlt": "A happy baby receiving loving medical care",
+              "backgroundImage": "/images/contact-legal.webp",
+              "backgroundImageAlt": "Judge's gavel and golden scales of justice",
               "fields": {
                 "firstName": {
-                  "label": "Your Name",
-                  "placeholder": "Enter Your Name"
+                  "label": "Your Name *",
+                  "placeholder": "Your Name *",
+                  "name": "name",
+                  "type": "text",
+                  "autoComplete": "name",
+                  "required": true
                 },
                 "lastName": {
                   "label": "Subject",
-                  "placeholder": "Enter Subject"
+                  "placeholder": "Subject",
+                  "name": "subject",
+                  "type": "text",
+                  "required": false
                 },
                 "email": {
-                  "label": "Your Email",
-                  "placeholder": "Enter Your Email"
+                  "label": "Your Email *",
+                  "placeholder": "Your Email *",
+                  "name": "email",
+                  "type": "email",
+                  "autoComplete": "email",
+                  "required": true
                 },
                 "phone": {
-                  "label": "Phone Number",
-                  "placeholder": "Enter Phone Number",
+                  "label": "Your Phone *",
+                  "placeholder": "Your Phone *",
+                  "name": "phone",
+                  "type": "tel",
+                  "autoComplete": "tel",
+                  "required": true,
                   "countryButtonLabel": "Choose country calling code"
                 },
                 "message": {
-                  "label": "Your Message",
-                  "placeholder": "Enter Your Message"
+                  "label": "Your Message *",
+                  "placeholder": "Your Message *",
+                  "name": "message",
+                  "required": true
                 }
               },
               "countries": [
@@ -2538,10 +2587,10 @@
               "submitLabel": "Send Message",
               "sendingLabel": "Sending...",
               "resetLabel": "Reset",
-              "successTitle": "Thank you!",
+              "successTitle": "Thank You!",
               "successText": [
-                "Your form passed the client-side submission step.",
-                "Connect an email service or backend API to deliver your message to your team."
+                "Your message has been submitted in this demo.",
+                "Connect the form to your backend to deliver real enquiries."
               ],
               "successButton": "Send Another Message",
               "errorText": "Something went wrong. Please try again later.",
@@ -2606,32 +2655,32 @@
         "variants": {
           "InsuranceFaqPage1": {
             "title": "Frequently Asked Questions",
-            "intro": "Find answers to common questions about our fertility treatments, procedures, and patient care to help you make informed decisions.",
-            "eyebrow": "FAQ",
-            "headingFirst": "Frequently Asked",
-            "headingHighlight": "Questions",
-            "image": "/images/home/faq.webp",
-            "imageAlt": "Mother holding her baby",
+            "intro": "Find quick answers to common queries about our legal services and how we can help you.",
+            "eyebrow": "Frequently Asked Questions",
+            "headingFirst": "Got Questions?",
+            "headingHighlight": "We’ve Got Answers",
+            "image": "/images/faq-legal-illustration.webp",
+            "imageAlt": "Golden scales of justice, legal books, a gavel and a question mark",
             "items": [
               {
-                "question": "How much do you charge for a consultation?",
-                "answer": "Our consultation fees are kept affordable and vary depending on the type of consultation, whether it is an in-clinic or online consultation. Please contact our clinic directly for detailed information about the charges."
+                "question": "What type of legal services do you provide?",
+                "answer": "We provide a wide range of legal services including corporate law, family law, criminal defense, property law, and more."
               },
               {
-                "question": "What types of treatments do you offer?",
-                "answer": "We provide a range of fertility and reproductive healthcare services, including fertility consultations, IVF, IUI, gynecology care, prenatal care, family planning and personalized treatment options."
+                "question": "How can I schedule a consultation?",
+                "answer": "You can schedule a consultation by contacting our team through the contact form, calling our office, or sending us an email. Our team will help you arrange a convenient appointment."
               },
               {
-                "question": "How do I book my appointment?",
-                "answer": "You can book an appointment by contacting our clinic directly or using the appointment booking option available on our website. Our team will help you choose a convenient date and time."
+                "question": "What are your consultation fees?",
+                "answer": "Our consultation fees depend on the nature and complexity of your legal matter. Please contact our office for detailed information about our consultation charges."
               },
               {
-                "question": "Can I cancel or reschedule my appointment?",
-                "answer": "Yes. You can contact our clinic in advance to cancel or reschedule your appointment. Our support team will help you find another suitable time."
+                "question": "Do you handle international cases?",
+                "answer": "Yes, we assist with selected international legal matters and cross-border legal issues, subject to applicable jurisdiction and our areas of practice."
               },
               {
-                "question": "Is IVF treatment safe?",
-                "answer": "IVF is a widely used fertility treatment, but every medical treatment has potential risks and benefits. Your fertility specialist can explain the treatment process and discuss what is appropriate for your individual situation."
+                "question": "How long does a legal process take?",
+                "answer": "The duration depends on the type of case, its complexity, applicable legal procedures, and court schedules. We keep our clients informed throughout the process."
               }
             ]
           }
@@ -2728,7 +2777,7 @@
           "InsuranceFooter1": {
             "ariaLabel": "Website footer",
             "policyAriaLabel": "Legal and policy links",
-            "about": "A perfect place to relax, rejuvenate, and restore your natural beauty and inner balance.",
+            "about": "Our experienced attorneys are committed to protect your rights with integrity and professionalism.",
             "columns": [
               {
                 "title": "Quick Links",
@@ -2743,16 +2792,16 @@
                     "href": "#about"
                   },
                   {
-                    "label": "Services",
-                    "href": "#services"
-                  },
-                  {
-                    "label": "Gallery",
-                    "href": "#gallery"
-                  },
-                  {
                     "label": "Our Team",
                     "href": "#team"
+                  },
+                  {
+                    "label": "Testimonials",
+                    "href": "#testimonials"
+                  },
+                  {
+                    "label": "FAQs",
+                    "href": "#faqs"
                   },
                   {
                     "label": "Contact Us",
@@ -2765,33 +2814,34 @@
                 "source": "plans",
                 "links": [
                   {
-                    "label": "Body Treatments",
-                    "href": "#services"
+                    "label": "Corporate Law",
+                    "href": "#practice-area"
                   },
                   {
-                    "label": "Massage Therapy",
-                    "href": "#services"
+                    "label": "Family Law",
+                    "href": "#practice-area"
                   },
                   {
-                    "label": "Facial Care",
-                    "href": "#services"
+                    "label": "Criminal Defense",
+                    "href": "#practice-area"
                   },
                   {
-                    "label": "Aroma Therapy",
-                    "href": "#services"
+                    "label": "Property Law",
+                    "href": "#practice-area"
                   },
                   {
-                    "label": "Sauna Relax",
-                    "href": "#services"
+                    "label": "Dispute Resolution",
+                    "href": "#practice-area"
                   },
                   {
-                    "label": "Spa Packages",
-                    "href": "#services"
+                    "label": "Legal Consultation",
+                    "href": "#practice-area"
                   }
                 ]
               }
             ],
-            "contactTitle": "Get In Touch",
+            "contactTitle": "Contact Us",
+            "contactHeading": "Contact Info",
             "contactDetails": [
               {
                 "title": "Call Us",
@@ -2807,8 +2857,8 @@
               },
               {
                 "title": "Visit Us",
-                "value": "742 Evergreen Terrace, Springfield, 62704, United States",
-                "href": "https://maps.google.com/?q=New+Delhi+India",
+                "value": "742 Evergreen Terrace (or 123 Main St), Springfield, IL (Illinois), 62704, United States",
+                "href": "https://maps.google.com/?q=A-102+Sector+62+Noida",
                 "icon": "map-pin"
               }
             ],
@@ -2850,9 +2900,9 @@
       "Team": {
         "variants": {
           "InsuranceTeam1": {
-            "heroTitle": "Our Team",
-            "eyebrow": "Our Specialists",
-            "title": "Meet Our Expert Medical Professionals",
+            "heroTitle": "Our Legal Team",
+            "eyebrow": "Our Legal Team",
+            "title": "Meet Our Experienced Attorneys",
             "profile": {
               "name": "Dr. Priya Sharma",
               "role": "Gynecologist & Obstetrician",
@@ -2913,60 +2963,64 @@
               ]
             },
             "homeSection": {
-              "eyebrow": "Expert Team",
-              "title": "Our Experience",
-              "highlight": "Specialists",
-              "description": "Meet our team of certified and experienced professionals dedicated to providing the highest quality beauty and wellness care.",
+              "eyebrow": "Our Legal Team",
+              "title": "Meet Our Experienced",
+              "highlight": "Attorneys",
+              "description": "A team of dedicated legal professionals with deep expertise, a client-first approach, and a proven record of success.",
               "members": [
                 {
-                  "name": "Dr. Neha Sharma",
-                  "role": "Skin Care Specialist",
-                  "image": "/images/dr-neha-sharma.webp"
+                  "name": "Andrew Mitchell",
+                  "role": "Managing Partner",
+                  "image": "/images/andrew-mitchell.webp"
                 },
                 {
-                  "name": "Dr. Priya Verma",
-                  "role": "Massage Specialist",
-                  "image": "/images/dr-priya-verma.webp"
+                  "name": "Emily Carter",
+                  "role": "Senior Attorney",
+                  "image": "/images/emily-carter.webp"
                 },
                 {
-                  "name": "Dr. Anjali Gupta",
-                  "role": "Beauty Therapist",
-                  "image": "/images/dr-anjali-gupta.webp"
+                  "name": "Daniel Brooks",
+                  "role": "Corporate Law Specialist",
+                  "image": "/images/daniel-brooks.webp"
                 }
               ]
             },
             "members": [
               {
-                "name": "Dr. Priya Sharma",
-                "role": "Gynecologist & Obstetrician",
-                "image": "/images/home/specialist1.webp",
-                "imageAlt": "Dr. Priya Sharma, Gynecologist & Obstetrician",
+                "name": "Andrew Mitchell",
+                "role": "Managing Partner",
+                "image": "/images/andrew-mitchell.webp",
+                "imageAlt": "Andrew Mitchell, managing partner",
+                "icon": "scale",
                 "href": "/our-team/team-detail",
-                "linkLabel": "Contact us about John Doe"
+                "linkLabel": "Contact us about Andrew Mitchell"
               },
               {
-                "name": "Dr. Rajesh Mehta",
-                "role": "Fertility Specialist",
-                "image": "/images/home/specialist2.webp",
-                "imageAlt": "Dr. Rajesh Mehta, Fertility Specialist",
+                "name": "Emily Carter",
+                "role": "Senior Attorney",
+                "image": "/images/emily-carter.webp",
+                "imageAlt": "Emily Carter, senior attorney",
+                "icon": "gavel",
                 "href": "/our-team/team-detail",
-                "linkLabel": "Contact us about Jane Smith"
+                "linkLabel": "Contact us about Emily Carter"
               },
               {
-                "name": "Dr. Neha Kapoor",
-                "role": "IVF & Reproductive Endocrinologist",
-                "image": "/images/home/specialist3.webp",
-                "imageAlt": "Dr. Neha Kapoor, IVF & Reproductive Endocrinologist",
+                "name": "Daniel Brooks",
+                "role": "Corporate Law Specialist",
+                "image": "/images/daniel-brooks.webp",
+                "imageAlt": "Daniel Brooks, corporate law specialist",
+                "icon": "landmark",
                 "href": "/our-team/team-detail",
-                "linkLabel": "Contact us about David Brown"
+                "linkLabel": "Contact us about Daniel Brooks"
               },
               {
-                "name": "Dr. Amit Verma",
-                "role": "Laparoscopic Surgeon",
-                "image": "/images/home/specialist4.webp",
-                "imageAlt": "Dr. Amit Verma, Laparoscopic Surgeon",
+                "name": "Olivia Bennett",
+                "role": "Litigation Attorney",
+                "image": "/images/olivia-bennett.webp",
+                "imageAlt": "Olivia Bennett, litigation attorney",
+                "icon": "users-round",
                 "href": "/our-team/team-detail",
-                "linkLabel": "Contact us about Selina Kim"
+                "linkLabel": "Contact us about Olivia Bennett"
               },
               {
                 "name": "Dr. Sneha lyer",

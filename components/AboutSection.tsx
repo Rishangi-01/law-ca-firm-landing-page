@@ -6,30 +6,16 @@ import {
   FaAward,
   FaUsers,
   FaGavel,
-  FaLandmark,
   FaScaleBalanced,
 } from "react-icons/fa6";
+import { aboutSectionData, statsSectionData } from "@/data";
 
-const stats = [
-  {
-    icon: FaAward,
-    number: "10+",
-    label: "Years of",
-    subLabel: "Experience",
-  },
-  {
-    icon: FaUsers,
-    number: "500+",
-    label: "Clients",
-    subLabel: "Served",
-  },
-  {
-    icon: FaGavel,
-    number: "95%",
-    label: "Success",
-    subLabel: "Rate",
-  },
-];
+const stats = statsSectionData.items.slice(0, 3);
+const statIcons: Record<string, typeof FaAward> = {
+  award: FaAward,
+  users: FaUsers,
+  gavel: FaGavel,
+};
 
 const fadeUp = {
   hidden: { opacity: 0, y: 35 },
@@ -59,15 +45,15 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fcf9f4] py-16 sm:py-20 lg:py-28 w-full">
-      {/* Background Decoration */}
+    <section id="about" className="relative overflow-hidden bg-[#fcf9f4] py-16 sm:py-20 lg:py-28 w-full">
+
       <div className="absolute right-8 top-5 text-[#b77a08]/[0.06] pointer-events-none">
         <FaScaleBalanced className="text-[150px] sm:text-[190px]" />
       </div>
 
       <div className="container mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.72fr_1.15fr_1.38fr] lg:gap-10 xl:gap-14">
-          {/* LEFT CONTENT */}
+
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -76,24 +62,24 @@ export default function AboutSection() {
             className="relative z-10 order-1"
           >
             <span className="mb-5 inline-flex items-center gap-2 text-sm font-bold tracking-wider text-[#102943] sm:text-base">
-              ABOUT US
+              {aboutSectionData.homeSection.eyebrow}
               <span className="h-3 w-3 rotate-45 bg-[#bd810c]" />
             </span>
 
             <h2 className="font-serif text-[42px] font-bold leading-[1.13] text-[#102943] sm:text-5xl xl:text-[54px]">
-              A Trusted
+              {aboutSectionData.homeSection.title[0]}
               <br />
-              Law Firm
+              {aboutSectionData.homeSection.title[1]}
               <br />
-              for Your
+              {aboutSectionData.homeSection.title[2]}
               <br />
-              <span className="italic text-[#b77a08]">Legal Needs.</span>
+              <span className="italic text-[#b77a08]">{aboutSectionData.highlight}</span>
             </h2>
 
             <div className="mt-8 h-[3px] w-24 bg-[#b77a08]" />
           </motion.div>
 
-          {/* CENTER IMAGE */}
+
           <motion.div
             initial={{ opacity: 0, scale: 0.94, y: 35 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -101,16 +87,16 @@ export default function AboutSection() {
             viewport={{ once: true, amount: 0.2 }}
             className="relative order-2 mx-auto w-full max-w-[480px] lg:max-w-none"
           >
-            {/* Golden Decorative Blocks */}
+
             <div className="absolute -left-3 -top-3 z-0 h-28 w-28 rounded-tl-[35px] bg-[#bd810c] sm:-left-5 sm:-top-5 sm:h-32 sm:w-32" />
 
             <div className="absolute -bottom-3 -right-3 z-0 h-28 w-28 rounded-br-[35px] bg-[#bd810c] sm:-bottom-5 sm:-right-5 sm:h-32 sm:w-32" />
 
-            {/* Main Image */}
+
             <div className="relative z-10 aspect-[4/5] overflow-hidden rounded-[30px] border-2 border-white shadow-[0_15px_45px_rgba(25,30,35,0.16)]">
               <Image
-                src="/images/lady-justice.png"
-                alt="Lady Justice statue and legal books"
+                src={aboutSectionData.mainImage}
+                alt={aboutSectionData.mainImageAlt}
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 35vw"
@@ -120,7 +106,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#102943]/20 via-transparent to-transparent" />
             </div>
 
-            {/* TRUST BADGE */}
+
             <motion.div
               initial={{ opacity: 0, scale: 0.5, rotate: -25 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -142,8 +128,8 @@ export default function AboutSection() {
                 }}
               >
                 <Image
-                  src="/images/about-logo.png"
-                  alt=""
+                  src={aboutSectionData.homeSection.sealImage}
+                  alt={aboutSectionData.homeSection.sealImageAlt}
                   width={165}
                   height={165}
                   className="h-auto w-full object-contain drop-shadow-lg"
@@ -152,7 +138,7 @@ export default function AboutSection() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT CONTENT */}
+
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -161,29 +147,31 @@ export default function AboutSection() {
             className="relative z-10 order-3 pt-5 lg:pt-0"
           >
             <h2 className="font-serif text-3xl font-bold leading-tight text-[#102943] sm:text-4xl xl:text-[44px]">
-              Your Trusted Partner in
+              {aboutSectionData.homeSection.features[3].title}
               <br className="hidden xl:block" />
               <span className="mt-1 block text-[#b77a08]">
-                Legal Excellence.
+                {aboutSectionData.homeSection.features[4].title}
               </span>
             </h2>
 
             <div className="my-7 h-[3px] w-24 bg-[#b77a08]" />
 
             <p className="text-base leading-[1.8] text-gray-600 sm:text-lg">
-              We are a client-focused law firm committed to delivering
-              practical, result-oriented legal solutions with integrity,
-              professionalism, and a deep understanding of your needs.
+              {aboutSectionData.homeText}
             </p>
 
-            {/* STATS */}
+
             <div className="mt-10 grid grid-cols-3 divide-x divide-gray-300">
               {stats.map((item, index) => {
-                const Icon = item.icon;
+                const Icon = statIcons[item.icon];
+                if (!Icon) {
+                  throw new Error(`Unknown about statistic icon: ${item.icon}`);
+                }
+                const labelWords = item.label.split(" ");
 
                 return (
                   <motion.div
-                    key={item.number}
+                    key={item.value}
                     initial={{ opacity: 0, y: 25 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{
@@ -196,13 +184,13 @@ export default function AboutSection() {
                     <Icon className="mb-3 text-3xl text-[#bd810c] sm:text-4xl" />
 
                     <h3 className="font-serif text-3xl font-bold text-[#102943] sm:text-4xl lg:text-[38px]">
-                      {item.number}
+                      {item.value}
                     </h3>
 
                     <p className="mt-1 text-sm leading-6 text-gray-700 sm:text-base">
-                      {item.label}
+                      {labelWords.slice(0, -1).join(" ")}
                       <br />
-                      {item.subLabel}
+                      {labelWords[labelWords.length - 1]}
                     </p>
                   </motion.div>
                 );

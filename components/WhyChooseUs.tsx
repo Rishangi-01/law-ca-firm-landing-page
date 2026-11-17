@@ -8,25 +8,17 @@ import {
   FaUsers,
   FaCheck,
 } from "react-icons/fa";
+import { whyChooseUsData } from "@/data";
 
-const features = [
-  {
-    icon: FaBalanceScale,
-    title: "Expert",
-    subtitle: "Legal Advice",
-  },
-  {
-    icon: FaUsers,
-    title: "Client-First",
-    subtitle: "Approach",
-  },
+const featureItems = [
+  whyChooseUsData.items[0],
+  whyChooseUsData.items[2],
 ];
-
-const benefits = [
-  "A Team of Experienced & Skilled Attorneys",
-  "Tailored Strategies for Individuals & Businesses",
-  "Commitment to Confidentiality & Integrity",
-];
+const benefitItems = whyChooseUsData.items.slice(3, 6);
+const featureIcons: Record<string, typeof FaBalanceScale> = {
+  "balance-scale": FaBalanceScale,
+  users: FaUsers,
+};
 
 export default function WhyChooseUs() {
   const shouldReduceMotion = useReducedMotion();
@@ -104,8 +96,8 @@ export default function WhyChooseUs() {
                 className="relative aspect-[0.82] w-full"
               >
                 <Image
-                  src="/images/lady-justice.png"
-                  alt="Lady Justice statue with golden scales and judge's gavel"
+                  src={whyChooseUsData.image}
+                  alt={whyChooseUsData.imageAlt}
                   fill
                   priority
                   sizes="(max-width: 1024px) 90vw, 35vw"
@@ -141,7 +133,7 @@ export default function WhyChooseUs() {
               <FaBalanceScale className="shrink-0 text-[35px] text-[#c18a13] sm:text-[43px]" />
 
               <span className="text-[17px] font-bold uppercase tracking-[1.5px] text-[#09243c] sm:text-[21px]">
-                Why Choose Us
+                {whyChooseUsData.eyebrow}
               </span>
 
               <span className="h-[2px] w-16 bg-gradient-to-r from-[#bd8410] to-transparent sm:w-28" />
@@ -153,10 +145,10 @@ export default function WhyChooseUs() {
               variants={fadeUp}
               className="font-serif text-[37px] font-bold leading-[1.15] tracking-[-1px] text-[#082139] sm:text-[46px] md:text-[52px] xl:text-[58px] 2xl:text-[58px]"
             >
-              Your Trusted Legal Partner
-
+              {whyChooseUsData.title}{" "}
               <span className="block bg-gradient-to-r from-[#a96e08] via-[#ca941e] to-[#a96e08] bg-clip-text text-transparent">
-                for Comprehensive Solutions
+                {whyChooseUsData.titleLine2}{" "}
+                {whyChooseUsData.highlight}
               </span>
             </motion.h2>
 
@@ -165,9 +157,7 @@ export default function WhyChooseUs() {
               variants={fadeUp}
               className="mt-5 text-[16px] leading-[1.8] text-[#393939] sm:text-[18px] lg:text-[19px]"
             >
-              We offer expert legal counsel, strong representation, and
-              practical solutions tailored to your unique needs, ensuring
-              protection of your rights and long-term peace of mind.
+              {whyChooseUsData.text}
             </motion.p>
 
             
@@ -176,12 +166,15 @@ export default function WhyChooseUs() {
               className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-5 lg:gap-7"
             >
 
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+              {featureItems.map((feature, index) => {
+                const Icon = featureIcons[feature.icon];
+                if (!Icon) {
+                  throw new Error(`Unknown WhyChooseUs icon: ${feature.icon}`);
+                }
 
                 return (
                   <motion.div
-                    key={feature.title}
+                    key={feature.title.join(" ")}
                     whileHover={
                       shouldReduceMotion
                         ? undefined
@@ -205,11 +198,11 @@ export default function WhyChooseUs() {
             
                     <div>
                       <h3 className="font-sans text-[21px] font-bold leading-tight text-[#09243c] sm:text-[24px] lg:text-[26px]">
-                        {feature.title}
+                        {feature.title[0]}
                       </h3>
 
                       <h3 className="font-sans text-[21px] font-bold leading-tight text-[#09243c] sm:text-[24px] lg:text-[26px]">
-                        {feature.subtitle}
+                        {feature.title[1]}
                       </h3>
                     </div>
 
@@ -234,9 +227,9 @@ export default function WhyChooseUs() {
             
               <div className="space-y-4 sm:space-y-3">
 
-                {benefits.map((benefit, index) => (
+                {benefitItems.map((benefit, index) => (
                   <motion.div
-                    key={benefit}
+                    key={benefit.title.join(" ")}
                     initial={{
                       opacity: 0,
                       x: shouldReduceMotion ? 0 : -20,
@@ -262,7 +255,7 @@ export default function WhyChooseUs() {
 
                     {/* BENEFIT TEXT */}
                     <p className="text-[15px] font-medium leading-relaxed text-[#303030] sm:text-[17px] lg:text-[18px]">
-                      {benefit}
+                      {benefit.title.join(" ")}
                     </p>
 
                   </motion.div>
@@ -299,8 +292,8 @@ export default function WhyChooseUs() {
                   className="relative aspect-square w-full"
                 >
                   <Image
-                    src="/images/trusted-legal-badge.png"
-                    alt="Trusted Legal Partner badge"
+                    src={whyChooseUsData.badgeImage}
+                    alt={whyChooseUsData.badgeImageAlt}
                     fill
                     sizes="205px"
                     className="object-contain"

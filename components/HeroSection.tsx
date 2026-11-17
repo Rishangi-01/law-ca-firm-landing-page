@@ -7,24 +7,14 @@ import {
   FaGavel,
   FaUsers,
 } from "react-icons/fa";
+import { heroSlideData, highlightsData } from "@/data";
 
-const features = [
-  {
-    icon: FaShieldAlt,
-    title: "Expert Legal Advice",
-    description: "Trusted guidance for every legal matter.",
-  },
-  {
-    icon: FaGavel,
-    title: "Strong Representation",
-    description: "Dedicated advocacy for your rights.",
-  },
-  {
-    icon: FaUsers,
-    title: "Client-Focused Approach",
-    description: "Personalized solutions that put you first.",
-  },
-];
+const features = highlightsData.items.slice(0, 3);
+const featureIcons: Record<string, typeof FaShieldAlt> = {
+  shield: FaShieldAlt,
+  gavel: FaGavel,
+  users: FaUsers,
+};
 
 export default function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
@@ -39,7 +29,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative isolate min-h-[720px] overflow-hidden bg-[#fffefa] lg:min-h-[900px] w-full">
+    <section id="home" className="relative isolate min-h-[720px] overflow-hidden bg-[#fffefa] lg:min-h-[900px] w-full">
 
       {/* TOP CONTENT */}
       <div className="relative z-10 mx-auto max-w-[1800px] px-5 pt-12 sm:px-8 sm:pt-16 lg:px-14 lg:pt-12 xl:px-20">
@@ -54,9 +44,9 @@ export default function HeroSection() {
             className="max-w-[1050px]"
           >
             <h1 className="font-serif text-[38px] font-bold leading-[1.16] tracking-[-1.5px] text-[#071c35] sm:text-[48px] md:text-[58px] lg:text-[60px] xl:text-[55px]">
-              Your Trusted Legal Partner for{" "}
+              {heroSlideData.title.slice(0, -1).join(" ")}{" "}
               <span className="block bg-gradient-to-r from-[#a66b08] via-[#c18a19] to-[#94600b] bg-clip-text text-transparent">
-                Comprehensive Legal Solutions
+                {heroSlideData.title[heroSlideData.title.length - 1]}
               </span>
             </h1>
 
@@ -75,9 +65,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-7 max-w-[680px] text-[16px] leading-[1.8] text-[#333333] sm:text-[18px] md:text-[20px] lg:text-[21px]"
             >
-              We provide strategic legal advice, strong representation, and
-              personalized solutions to protect your rights, resolve disputes,
-              minimize risks, and achieve your goals.
+              {heroSlideData.text}
             </motion.p>
           </motion.div>
 
@@ -89,7 +77,10 @@ export default function HeroSection() {
             className="relative z-20 flex flex-col justify-start lg:pl-2 lg:pt-2"
           >
             {features.map((feature, index) => {
-              const Icon = feature.icon;
+              const Icon = featureIcons[feature.icon];
+              if (!Icon) {
+                throw new Error(`Unknown hero feature icon: ${feature.icon}`);
+              }
 
               return (
                 <motion.div
@@ -119,7 +110,7 @@ export default function HeroSection() {
                     </h3>
 
                     <p className="mt-1 hidden text-sm text-gray-500 md:block">
-                      {feature.description}
+                      {feature.text}
                     </p>
                   </div>
                 </motion.div>
@@ -139,7 +130,7 @@ export default function HeroSection() {
           transition={{ duration: 1.8, ease: "easeOut" }}
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/images/legal-hero-bg.png')",
+            backgroundImage: `url('${heroSlideData.image}')`,
           }}
         />
 

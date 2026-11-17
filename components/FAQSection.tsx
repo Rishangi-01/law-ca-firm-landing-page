@@ -14,45 +14,9 @@ import {
   Plus,
   Minus,
 } from "lucide-react";
+import { faqSectionData } from "@/data";
 
-interface FAQ {
-  id: number;
-  question: string;
-  answer: string;
-}
-
-const faqs: FAQ[] = [
-  {
-    id: 1,
-    question: "What type of legal services do you provide?",
-    answer:
-      "We provide a wide range of legal services including corporate law, family law, criminal defense, property law, and more.",
-  },
-  {
-    id: 2,
-    question: "How can I schedule a consultation?",
-    answer:
-      "You can schedule a consultation by contacting our team through the contact form, calling our office, or sending us an email. Our team will help you arrange a convenient appointment.",
-  },
-  {
-    id: 3,
-    question: "What are your consultation fees?",
-    answer:
-      "Our consultation fees depend on the nature and complexity of your legal matter. Please contact our office for detailed information about our consultation charges.",
-  },
-  {
-    id: 4,
-    question: "Do you handle international cases?",
-    answer:
-      "Yes, we assist with selected international legal matters and cross-border legal issues, subject to applicable jurisdiction and our areas of practice.",
-  },
-  {
-    id: 5,
-    question: "How long does a legal process take?",
-    answer:
-      "The duration depends on the type of case, its complexity, applicable legal procedures, and court schedules. We keep our clients informed throughout the process.",
-  },
-];
+const faqs = faqSectionData.items;
 
 export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
@@ -66,7 +30,7 @@ export default function FAQSection() {
 
   return (
     <section
-      id="faq"
+      id="faqs"
       aria-labelledby="faq-heading"
       className="relative overflow-hidden bg-[#faf8f5] px-4 py-12 sm:px-6 sm:py-12 lg:px-10 lg:py-12 w-full"
     >
@@ -97,7 +61,7 @@ export default function FAQSection() {
               />
 
               <span className="text-xs font-bold uppercase tracking-[0.1em] text-[#102a40] sm:text-base lg:text-lg">
-                Frequently Asked Questions
+                {faqSectionData.eyebrow}
               </span>
             </div>
 
@@ -109,16 +73,15 @@ export default function FAQSection() {
             id="faq-heading"
             className="font-serif text-4xl font-bold leading-[1.15] tracking-tight text-[#10243e] sm:text-5xl md:text-6xl lg:text-[4.3rem]"
           >
-            Got Questions?{" "}
+            {faqSectionData.headingFirst}{" "}
             <span className="text-[#bd831b]">
-              We’ve Got Answers
+              {faqSectionData.headingHighlight}
             </span>
           </h2>
 
       
           <p className="mx-auto mt-5 max-w-4xl text-base leading-relaxed text-[#50545a] sm:text-lg lg:text-xl">
-            Find quick answers to common queries about our
-            legal services and how we can help you.
+            {faqSectionData.intro}
           </p>
         </motion.div>
 
@@ -156,8 +119,8 @@ export default function FAQSection() {
               className="relative z-10 mx-auto aspect-[4/4] w-full"
             >
               <Image
-                src="/images/faq-legal-illustration.png"
-                alt="Golden scales of justice, legal books, a gavel and a question mark"
+                src={faqSectionData.image}
+                alt={faqSectionData.imageAlt}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 42vw"
@@ -184,10 +147,13 @@ export default function FAQSection() {
           >
             {faqs.map((faq, index) => {
               const isOpen = activeIndex === index;
+              const faqId = index + 1;
+              const questionId = `faq-question-${faqId}`;
+              const answerId = `faq-answer-${faqId}`;
 
               return (
                 <motion.div
-                  key={faq.id}
+                  key={faq.question}
                   layout={!shouldReduceMotion}
                   transition={{
                     layout: { duration: 0.35, ease: "easeInOut" },
@@ -203,8 +169,8 @@ export default function FAQSection() {
                     type="button"
                     onClick={() => toggleFAQ(index)}
                     aria-expanded={isOpen}
-                    aria-controls={`faq-answer-${faq.id}`}
-                    id={`faq-question-${faq.id}`}
+                    aria-controls={answerId}
+                    id={questionId}
                     className="flex min-h-[76px] w-full items-center gap-4 px-4 py-4 text-left outline-none transition-colors sm:min-h-[82px] sm:gap-5 sm:px-6 lg:px-7"
                   >
                     {/* Question Icon */}
@@ -246,9 +212,9 @@ export default function FAQSection() {
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.div
-                        id={`faq-answer-${faq.id}`}
+                        id={answerId}
                         role="region"
-                        aria-labelledby={`faq-question-${faq.id}`}
+                        aria-labelledby={questionId}
                         initial={
                           shouldReduceMotion
                             ? { opacity: 1 }
