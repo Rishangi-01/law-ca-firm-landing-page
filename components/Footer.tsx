@@ -105,7 +105,7 @@ export default function Footer() {
           className="relative flex shrink-0 items-center"
         >
           <Image
-            src={siteInfoData.logo}
+            src={siteInfoData.whiteLogo}
             alt={siteInfoData.name}
             width={320}
             height={100}
