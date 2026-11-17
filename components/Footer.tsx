@@ -93,7 +93,7 @@ export default function Footer() {
         className="pointer-events-none absolute -right-40 -top-40 -z-10 h-[450px] w-[450px] rounded-full bg-[#153d5a]/30 blur-[120px]"
       />
 
-      <div className="mx-auto max-w-[1600px] pb-7 pt-16 sm:pt-20 lg:pt-24 px-5 sm:px-8 lg:px-12 xl:px-12">
+      <div className="mx-auto max-w-[1600px] pb-7 pt-12 sm:pt-12 lg:pt-16 px-5 sm:px-8 lg:px-12 xl:px-12">
 
         <div>
           <Link
@@ -287,10 +287,10 @@ export default function Footer() {
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="mt-16 h-[3px] origin-left bg-[#e9a916] sm:mt-20"
+          className="mt-12 h-[3px] origin-left bg-[#e9a916] sm:mt-12"
         />
 
-        <div className="flex flex-col items-center justify-between gap-7 py-8 sm:flex-row sm:gap-5 sm:py-9">
+        <div className="flex flex-col items-center justify-between gap-7 pt-8 sm:flex-row sm:gap-5 sm:pt-8">
 
 
           <div className="flex items-center gap-4 sm:gap-5">

@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-choose-us"
-      className="relative overflow-hidden bg-[#fffdfa] py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-[#fffdfa] py-12 sm:py-16 lg:py-16"
     >
       {/* SUBTLE BACKGROUND DECORATION */}
       <div className="pointer-events-none absolute -right-40 top-0 h-[400px] w-[400px] rounded-full bg-[#d49b19]/[0.04] blur-[100px]" />

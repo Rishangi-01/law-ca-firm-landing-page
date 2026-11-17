@@ -55,7 +55,7 @@ export default function OurLegalTeam() {
     <section
       id="team"
       aria-labelledby="legal-team-heading"
-      className="relative overflow-hidden bg-[#faf8f4] py-20 sm:py-24 lg:py-28 w-full px-5 sm:px-8 lg:px-12 xl:px-12"
+      className="relative overflow-hidden bg-[#faf8f4] py-12 sm:py-16 lg:py-16 w-full px-5 sm:px-8 lg:px-12 xl:px-12"
     >
       
       <div

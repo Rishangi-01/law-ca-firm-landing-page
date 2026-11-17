@@ -48,7 +48,7 @@ export default function ContactSection() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="relative isolate overflow-hidden bg-[#faf8f5] py-16 sm:py-20 lg:py-24 w-full px-5 sm:px-8 lg:px-12 xl:px-12"
+      className="relative isolate overflow-hidden bg-[#faf8f5] py-12 sm:py-16 lg:py-16 w-full px-5 sm:px-8 lg:px-12 xl:px-12"
     >
       {/* Right-side Lady Justice background */}
       <div

@@ -56,7 +56,7 @@ export default function PracticeAreas() {
   };
 
   return (
-    <section id="practice-area" className="practice-section relative isolate overflow-hidden py-20 sm:py-24 lg:py-28">
+    <section id="practice-area" className="practice-section relative isolate overflow-hidden py-12 sm:py-16 lg:py-16">
 
       {/* BACKGROUND IMAGE */}
       <div
