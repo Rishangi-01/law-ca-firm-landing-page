@@ -277,49 +277,6 @@ export default function Navbar() {
                 })}
               </div>
 
-              <div className="mt-5 space-y-4 rounded-lg bg-[#071c33] p-5 text-white">
-                <a
-                  href={siteInfoData.mobileMenu.phoneHref}
-                  className="flex items-center gap-3 text-sm"
-                >
-                  <FaPhoneAlt className="text-[#e5a51a]" />
-                  {siteInfoData.mobileMenu.phoneLabel}
-                </a>
-
-                <a
-                  href={siteInfoData.mobileMenu.emailHref}
-                  className="flex items-center gap-3 text-sm"
-                >
-                  <FaEnvelope className="text-[#e5a51a]" />
-                  {siteInfoData.mobileMenu.emailLabel}
-                </a>
-
-                <div className="flex items-start gap-3 text-sm leading-relaxed">
-                  <FaMapMarkerAlt className="mt-1 shrink-0 text-[#e5a51a]" />
-                  {siteInfoData.addressLines.join(" ")}
-                </div>
-
-                <div className="flex gap-5 border-t border-white/20 pt-4">
-                  {socialLinks.map((social) => {
-                    const Icon = socialIcons[social.icon];
-                    if (!Icon) {
-                      throw new Error(`Unknown navigation social icon: ${social.icon}`);
-                    }
-
-                    return (
-                      <a
-                        key={social.label}
-                        href={social.href}
-                        aria-label={social.label}
-                        className="text-lg transition-colors hover:text-[#e5a51a]"
-                      >
-                        <Icon />
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
-
               <Link
                 href={navigationData.button.href}
                 onClick={() => setMenuOpen(false)}
