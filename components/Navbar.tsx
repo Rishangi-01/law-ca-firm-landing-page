@@ -159,11 +159,11 @@ export default function Navbar() {
             width={320}
             height={100}
             priority
-            className="h-[65px] w-[200px] object-contain sm:h-[75px] sm:w-[250px] lg:h-[65px] lg:w-[290px]"
+            className="h-[65px] w-[200px] object-contain sm:h-[75px] sm:w-[250px] lg:h-[65px] lg:w-[200px]"
           />
         </Link>
 
-        <nav className="hidden items-center gap-5 xl:gap-8 lg:flex">
+        <nav className="hidden items-center gap-5 xl:gap-6 lg:flex">
           {navLinks.map((link) => {
             const id = link.href.replace("#", "");
             const isActive = activeSection === id;
@@ -195,7 +195,7 @@ export default function Navbar() {
 
           <Link
             href={navigationData.button.href}
-            className="group flex items-center gap-3 rounded-lg bg-gradient-to-r from-[#b77a08] to-[#d49b1b] px-6 py-4 text-[16px] font-semibold text-white shadow-md shadow-[#b77a08]/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#b77a08]/30"
+            className="group flex items-center gap-3 rounded-lg bg-gradient-to-r from-[#b77a08] to-[#d49b1b] px-5 py-4 text-[16px] font-semibold text-white shadow-md shadow-[#b77a08]/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#b77a08]/30"
           >
             <FaCalendarAlt className="text-[19px] transition-transform duration-300 group-hover:rotate-12" />
             {navigationData.button.label}

@@ -51,7 +51,7 @@ const itemVariants = {
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-6">
-      <h3 className="font-serif text-2xl font-bold tracking-tight text-white sm:text-[27px]">
+      <h3 className="font-serif text-2xl font-bold tracking-tight text-white sm:text-[21px]">
         {children}
       </h3>
 
@@ -110,7 +110,7 @@ export default function Footer() {
             width={320}
             height={100}
             priority
-            className="h-[65px] w-[200px] object-contain sm:h-[75px] sm:w-[250px] lg:h-[65px]"
+            className="h-[65px] w-[200px] object-contain sm:h-[75px] sm:w-[200px] lg:h-[65px]"
           />
         </Link>
             <p className="mt-2 mb-4 max-w-[450px] text-[15px] leading-[1.6] text-[#d2d8df] lg:text-[18px]">
