@@ -52,20 +52,20 @@ export default function FAQSection() {
         >
       
           <div className="mb-5 flex items-center justify-center gap-1 sm:gap-6">
-            <span className="h-[2px] w-7 bg-[#c18a25] sm:w-16 lg:w-20" />
+            <span className="h-[2px] w-6 bg-[#c18a25] sm:w-16 lg:w-20" />
 
             <div className="flex items-center gap-2">
               <Scale
-                className="h-9 w-9 text-[#c18a25] sm:h-11 sm:w-11"
+                className="h-7 w-7 text-[#c18a25] sm:h-11 sm:w-11"
                 strokeWidth={1.8}
               />
 
-              <span className="text-xs font-bold uppercase tracking-[0.1em] text-[#102a40] sm:text-base lg:text-lg">
+              <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#102a40] sm:text-base lg:text-lg">
                 {faqSectionData.eyebrow}
               </span>
             </div>
 
-            <span className="h-[2px] w-7 bg-[#c18a25] sm:w-16 lg:w-20" />
+            <span className="h-[2px] w-6 bg-[#c18a25] sm:w-16 lg:w-20" />
           </div>
 
       
