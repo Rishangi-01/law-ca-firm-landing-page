@@ -84,7 +84,7 @@ export default function PracticeAreas() {
         >
 
           {/* EYEBROW */}
-          <div className="mb-5 flex items-center justify-center gap-4 sm:gap-6">
+          <div className="mb-5 flex items-center justify-center gap-2 sm:gap-6">
 
             <span className="h-[2px] w-10 bg-gradient-to-r from-transparent to-[#d49b19] sm:w-16" />
 
@@ -99,7 +99,7 @@ export default function PracticeAreas() {
           </div>
 
           
-          <h2 className="mx-auto max-w-[1000px] font-serif font-bold leading-[1.2] text-white text-[19px] sm:text-4xl xl:text-[38px]">
+          <h2 className="mx-auto max-w-[1000px] font-serif font-bold leading-[1.2] text-white text-[17px] sm:text-4xl xl:text-[38px]">
 
             {servicesData.title}
 

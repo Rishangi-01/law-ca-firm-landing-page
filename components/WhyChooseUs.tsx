@@ -138,11 +138,11 @@ export default function WhyChooseUs() {
             
             <motion.h2
               variants={fadeUp}
-              className="font-serif font-bold leading-[1.15] tracking-[-1px] text-[#082139] text-[29px] sm:text-4xl xl:text-[38px]"
+              className="font-serif font-bold leading-[1.15] tracking-[-1px] text-[#082139] text-[23px] sm:text-4xl xl:text-[38px]"
             >
               {whyChooseUsData.title}{" "}
               <span className="block bg-gradient-to-r from-[#a96e08] via-[#ca941e] to-[#a96e08] bg-clip-text text-transparent">
-                {whyChooseUsData.titleLine2}{" "}
+                {" "}
                 {whyChooseUsData.highlight}
               </span>
             </motion.h2>

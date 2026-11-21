@@ -1251,10 +1251,7 @@
             "homeSection": {
               "eyebrow": "ABOUT US",
               "title": [
-                "A Trusted",
-                "Law Firm",
-                "for Your"
-              ],
+                "A Trusted Law Firm"              ],
               "features": [
                 {
                   "title": "Expert Legal Advice",
@@ -1306,7 +1303,7 @@
             },
             "eyebrow": "ABOUT US",
             "title": "A Trusted Law Firm for Your",
-            "highlight": "Legal Needs.",
+            "highlight": "for Your Legal Needs.",
             "mainImage": "/images/lady-justice_.webp",
             "mainImageAlt": "Lady Justice statue and legal books",
             "familyImage": "/images/about-facial.webp",
@@ -1369,9 +1366,9 @@
         "variants": {
           "InsuranceWhyChooseUs1": {
             "eyebrow": "WHY CHOOSE US",
-            "title": "Your Trusted",
-            "titleLine2": "Legal Partner",
-            "highlight": "for Comprehensive Solutions",
+            "title": "Your Trusted Legal Partner",
+            "titleLine2": "",
+            "highlight": "For Comprehensive Solutions",
             "text": "We offer expert legal counsel, strong representation, and practical solutions tailored to your unique needs, ensuring protection of your rights and long-term peace of mind.",
             "image": "/images/lady-justice_.webp",
             "imageAlt": "Lady Justice statue with golden scales and judge's gavel",

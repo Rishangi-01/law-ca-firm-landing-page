@@ -51,10 +51,10 @@ export default function FAQSection() {
           className="mb-12 text-center sm:mb-14 lg:mb-16"
         >
       
-          <div className="mb-5 flex items-center justify-center gap-4 sm:gap-6">
-            <span className="h-[2px] w-10 bg-[#c18a25] sm:w-16 lg:w-20" />
+          <div className="mb-5 flex items-center justify-center gap-1 sm:gap-6">
+            <span className="h-[2px] w-7 bg-[#c18a25] sm:w-16 lg:w-20" />
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <Scale
                 className="h-9 w-9 text-[#c18a25] sm:h-11 sm:w-11"
                 strokeWidth={1.8}
@@ -65,7 +65,7 @@ export default function FAQSection() {
               </span>
             </div>
 
-            <span className="h-[2px] w-10 bg-[#c18a25] sm:w-16 lg:w-20" />
+            <span className="h-[2px] w-7 bg-[#c18a25] sm:w-16 lg:w-20" />
           </div>
 
       

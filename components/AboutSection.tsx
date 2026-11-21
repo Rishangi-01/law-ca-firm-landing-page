@@ -69,10 +69,6 @@ export default function AboutSection() {
             <h2 className="font-serif text-[29px] font-bold leading-[1.13] text-[#102943] sm:text-5xl xl:text-[38px]">
               {aboutSectionData.homeSection.title[0]}
               <br />
-              {aboutSectionData.homeSection.title[1]}
-              <br />
-              {aboutSectionData.homeSection.title[2]}
-              <br />
               <span className="italic text-[#b77a08]">{aboutSectionData.highlight}</span>
             </h2>
 
@@ -146,7 +142,7 @@ export default function AboutSection() {
             viewport={{ once: true, amount: 0.2 }}
             className="relative z-10 order-3 pt-5 lg:pt-0"
           >
-            <h2 className="font-serif text-[29px] font-bold leading-tight text-[#102943] text-[29px] sm:text-4xl xl:text-[38px]">
+            <h2 className="font-serif text-[27px] font-bold leading-tight text-[#102943] text-[29px] sm:text-4xl xl:text-[38px]">
               {aboutSectionData.homeSection.features[3].title}
               <br className="hidden xl:block" />
               <span className="mt-1 block text-[#b77a08]">
