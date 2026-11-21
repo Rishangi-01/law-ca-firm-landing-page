@@ -159,7 +159,7 @@ export default function Navbar() {
             width={320}
             height={100}
             priority
-            className="h-[65px] w-[210px] object-contain sm:h-[75px] sm:w-[250px] lg:h-[65px] lg:w-[290px]"
+            className="h-[65px] w-[200px] object-contain sm:h-[75px] sm:w-[250px] lg:h-[65px] lg:w-[290px]"
           />
         </Link>
 
@@ -231,46 +231,29 @@ export default function Navbar() {
           >
             <nav
               aria-label={siteInfoData.mobileMenu.ariaLabel}
-              className="mx-auto max-w-[1800px] px-5 py-5 md:px-8"
+              className="mx-auto max-w-[1800px] px-5 py-4 md:px-8 md:py-5"
             >
-              <div className="flex flex-col">
-                {navLinks.slice(0, 2).map((link) => {
+              <div className="flex flex-col gap-1">
+                {navLinks.map((link) => {
                   const id = link.href.replace("#", "");
                   const isActive = activeSection === id;
 
                   return (
-                    <button
+                    <a
                       key={link.label}
-                      onClick={() => handleNavClick(id)}
-                      className={`mobile-nav-link w-full text-left transition-colors duration-300 ${
-                        isActive ? "text-[#b77b09] font-bold" : "text-[#10243b]"
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className={`mobile-nav-link flex w-full items-center justify-between rounded-lg px-4 py-3 text-[16px] font-semibold transition-all duration-300 ${
+                        isActive
+                          ? "bg-[#f7f1e4] text-[#b77b09]"
+                          : "text-[#10243b] hover:bg-gray-50 hover:text-[#b77b09]"
                       }`}
                     >
                       {link.label}
                       {isActive && (
-                        <span className="ml-2 inline-block h-1.5 w-1.5 rounded-full bg-[#c18a13]" />
+                        <span className="h-2 w-2 rounded-full bg-[#c18a13]" />
                       )}
-                    </button>
-                  );
-                })}
-
-                {navLinks.slice(2).map((link) => {
-                  const id = link.href.replace("#", "");
-                  const isActive = activeSection === id;
-
-                  return (
-                    <button
-                      key={link.label}
-                      onClick={() => handleNavClick(id)}
-                      className={`mobile-nav-link w-full text-left transition-colors duration-300 ${
-                        isActive ? "text-[#b77b09] font-bold" : "text-[#10243b]"
-                      }`}
-                    >
-                      {link.label}
-                      {isActive && (
-                        <span className="ml-2 inline-block h-1.5 w-1.5 rounded-full bg-[#c18a13]" />
-                      )}
-                    </button>
+                    </a>
                   );
                 })}
               </div>

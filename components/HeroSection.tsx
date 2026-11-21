@@ -29,12 +29,12 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative isolate min-h-[720px] overflow-hidden bg-[#fffefa] lg:min-h-[900px] w-full">
+    <section id="home" className="relative isolate min-h-[690px] lg:min-h-[720px] overflow-hidden bg-[#fffefa] lg:min-h-[900px] w-full">
 
       {/* TOP CONTENT */}
       <div className="relative z-10 mx-auto max-w-[1600px] pt-12 sm:pt-16 lg:pt-12 px-5 sm:px-8 lg:px-12 xl:px-12">
 
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.9fr_0.9fr] lg:gap-12">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1.9fr_0.9fr] lg:gap-12">
 
           {/* LEFT CONTENT */}
           <motion.div
@@ -43,7 +43,7 @@ export default function HeroSection() {
             variants={fadeUp}
             className="max-w-[1050px]"
           >
-            <h1 className="font-serif text-[38px] font-bold leading-[1.16] tracking-[-1.5px] text-[#071c35] sm:text-[48px] md:text-[58px] lg:text-[60px] xl:text-[55px]">
+            <h1 className="font-serif text-[38px] font-bold leading-[1.16] tracking-[-1.5px] text-[#071c35] text-[38px] sm:text-[48px] md:text-[58px] lg:text-[60px] xl:text-[53px]">
               {heroSlideData.title.slice(0, -1).join(" ")}{" "}
               <span className="block bg-gradient-to-r from-[#a66b08] via-[#c18a19] to-[#94600b] bg-clip-text text-transparent">
                 {heroSlideData.title[heroSlideData.title.length - 1]}
@@ -92,7 +92,7 @@ export default function HeroSection() {
                     delay: 0.5 + index * 0.2,
                   }}
                   whileHover={shouldReduceMotion ? undefined : { x: 8 }}
-                  className={`group flex items-center gap-5 py-5 ${
+                  className={`group flex items-center gap-5 py-3 lg:py-5 ${
                     index !== features.length - 1
                       ? "border-b border-gray-200"
                       : ""
@@ -128,7 +128,7 @@ export default function HeroSection() {
           initial={{ scale: shouldReduceMotion ? 1 : 1.08 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.8, ease: "easeOut" }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block"
           style={{
             backgroundImage: `url('${heroSlideData.image}')`,
           }}

@@ -1478,7 +1478,7 @@
             "homeCount": 8,
             "homeImage": "/images/home/practice-bg.jpg",
             "homeImageAlt": "Haircut",
-            "practiceAreaHrefTemplate": "/practice-areas/{slug}",
+            "practiceAreaHrefTemplate": "#contact",
             "exploreLabelTemplate": "Explore {name}",
             "homeServiceSlugs": [
               "civil-law",

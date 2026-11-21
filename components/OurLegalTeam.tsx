@@ -94,7 +94,7 @@ export default function OurLegalTeam() {
       
           <h2
             id="legal-team-heading"
-            className="font-serif text-4xl font-bold leading-[1.12] tracking-tight text-[#102c3e] sm:text-5xl md:text-6xl lg:text-[3.4rem]"
+            className="font-serif font-bold leading-[1.12] tracking-tight text-[#102c3e] text-[29px] sm:text-4xl xl:text-[38px]"
           >
             {teamPageData.homeSection.title}{" "}
             <span className="text-[#b27a13]">
@@ -183,11 +183,6 @@ export default function OurLegalTeam() {
 
       
                   <div className="mt-4 h-[3px] w-12 rounded-full bg-[#e0a21e] transition-all duration-500 group-hover:w-24" />
-
-      
-                  <div className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
-                    <ArrowUpRight className="h-4 w-4" />
-                  </div>
                 </div>
               </motion.article>
             );

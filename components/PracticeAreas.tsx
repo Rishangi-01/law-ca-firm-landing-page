@@ -98,8 +98,8 @@ export default function PracticeAreas() {
 
           </div>
 
-          {/* MAIN HEADING */}
-          <h2 className="mx-auto max-w-[1000px] font-serif text-[34px] font-bold leading-[1.2] text-white sm:text-[43px] md:text-[50px] lg:text-[56px]">
+          
+          <h2 className="mx-auto max-w-[1000px] font-serif font-bold leading-[1.2] text-white text-[19px] sm:text-4xl xl:text-[38px]">
 
             {servicesData.title}
 

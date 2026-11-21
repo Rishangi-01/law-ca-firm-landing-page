@@ -120,7 +120,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="max-w-2xl font-serif text-4xl font-bold leading-[1.15] tracking-tight text-white sm:text-5xl md:text-6xl xl:text-[4rem]"
+              className="max-w-2xl font-serif font-bold leading-[1.15] tracking-tight text-white text-[29px] sm:text-4xl xl:text-[38px]"
             >
               {testimonialsSectionData.title}{" "}
               <span className="text-[#e5a62e]">
@@ -144,7 +144,7 @@ export default function Testimonials() {
                   className="flex flex-col"
                 >
           
-                  <blockquote className="max-w-[760px] font-serif text-[22px] leading-[1.55] text-white/95 sm:text-2xl md:text-[27px] xl:text-[30px]">
+                  <blockquote className="max-w-[760px] font-serif text-[16px] leading-[1.55] text-white/95 sm:text-2xl md:text-[27px] xl:text-[30px]">
                     &ldquo;{activeTestimonial.review}&rdquo;
                   </blockquote>
 
@@ -279,8 +279,7 @@ export default function Testimonials() {
             {/* Gold Edge */}
             <div className="absolute left-0 top-0 hidden h-full w-[3px] bg-gradient-to-b from-transparent via-[#c38d2a] to-transparent lg:block" />
 
-            {/* Bottom Image Accent */}
-            <div className="absolute bottom-7 right-7 hidden h-20 w-20 border-b-2 border-r-2 border-[#d4a03c]/80 lg:block" />
+
           </motion.div>
         </div>
       </div>

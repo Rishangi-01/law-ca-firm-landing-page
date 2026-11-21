@@ -110,7 +110,7 @@ export default function Footer() {
             width={320}
             height={100}
             priority
-            className="h-[65px] w-[210px] object-contain sm:h-[75px] sm:w-[250px] lg:h-[65px]"
+            className="h-[65px] w-[200px] object-contain sm:h-[75px] sm:w-[250px] lg:h-[65px]"
           />
         </Link>
             <p className="mt-2 mb-4 max-w-[450px] text-[15px] leading-[1.6] text-[#d2d8df] lg:text-[18px]">
@@ -124,13 +124,13 @@ export default function Footer() {
           initial={shouldReduceMotion ? false : "hidden"}
           whileInView="visible"
           viewport={{ once: true, amount: 0.12 }}
-          className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-12 lg:gap-x-8 xl:gap-x-10"
+          className="grid grid-cols-2 gap-y-12 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-12 lg:gap-x-8 xl:gap-x-10"
         >
 
 
           <motion.div
             variants={itemVariants}
-            className="lg:col-span-3"
+            className="lg:col-span-3 col-span-2"
           >
 
 
@@ -139,9 +139,9 @@ export default function Footer() {
                 href={phoneContact.href}
                 whileHover={shouldReduceMotion ? undefined : { scale: 1.08 }}
                 aria-label={`${phoneContact.title} ${siteInfoData.name}`}
-                className="flex h-[66px] w-[66px] shrink-0 items-center justify-center rounded-full border-2 border-[#e9a916] text-[#f2b51c] transition-all duration-300 hover:bg-[#e9a916] hover:text-[#061725]"
+                className="flex lg:h-[55px] lg:w-[55px] h-[45px] w-[45px] shrink-0 items-center justify-center rounded-full border-2 border-[#e9a916] text-[#f2b51c] transition-all duration-300 hover:bg-[#e9a916] hover:text-[#061725]"
               >
-                <Phone size={29} fill="currentColor" />
+                <Phone size={20} fill="currentColor" />
               </motion.a>
 
               <div>
@@ -163,9 +163,9 @@ export default function Footer() {
                 href={emailContact.href}
                 whileHover={shouldReduceMotion ? undefined : { scale: 1.08 }}
                 aria-label={`${emailContact.title} ${siteInfoData.name}`}
-                className="flex h-[66px] w-[66px] shrink-0 items-center justify-center rounded-full border-2 border-[#e9a916] text-[#f2b51c] transition-all duration-300 hover:bg-[#e9a916] hover:text-[#061725]"
+                className="flex lg:h-[55px] lg:w-[55px] h-[45px] w-[45px] shrink-0 items-center justify-center rounded-full border-2 border-[#e9a916] text-[#f2b51c] transition-all duration-300 hover:bg-[#e9a916] hover:text-[#061725]"
               >
-                <Mail size={29} />
+                <Mail size={20} />
               </motion.a>
 
               <div>
@@ -237,7 +237,7 @@ export default function Footer() {
 
           <motion.div
             variants={itemVariants}
-            className="border-t border-[#526071]/50 pt-9 sm:col-span-2 sm:border-t-0 sm:pt-0 lg:col-span-4 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-10"
+            className="col-span-2 border-t border-[#526071]/50 pt-9 sm:col-span-2 sm:border-t-0 sm:pt-0 lg:col-span-4 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-10"
           >
             <FooterHeading>{footerSectionData.contactHeading}</FooterHeading>
 
@@ -317,9 +317,9 @@ export default function Footer() {
                       ? undefined
                       : { scale: 0.95 }
                   }
-                  className="flex h-[57px] w-[57px] items-center justify-center rounded-full border-2 border-[#e9a916] text-white transition-all duration-300 hover:bg-[#e9a916] hover:text-[#061725]"
+                  className="flex lg:h-[45px] lg:w-[45px] h-[40px] w-[40px] items-center justify-center rounded-full border-2 border-[#e9a916] text-white transition-all duration-300 hover:bg-[#e9a916] hover:text-[#061725]"
                 >
-                  <Icon size={25} strokeWidth={2.1} />
+                  <Icon size={18} strokeWidth={2.1} />
                 </motion.a>
               );
             })}

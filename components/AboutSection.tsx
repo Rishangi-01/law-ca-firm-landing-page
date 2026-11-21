@@ -66,7 +66,7 @@ export default function AboutSection() {
               <span className="h-3 w-3 rotate-45 bg-[#bd810c]" />
             </span>
 
-            <h2 className="font-serif text-[42px] font-bold leading-[1.13] text-[#102943] sm:text-5xl xl:text-[54px]">
+            <h2 className="font-serif text-[29px] font-bold leading-[1.13] text-[#102943] sm:text-5xl xl:text-[38px]">
               {aboutSectionData.homeSection.title[0]}
               <br />
               {aboutSectionData.homeSection.title[1]}
@@ -116,7 +116,7 @@ export default function AboutSection() {
                 delay: 0.35,
                 type: "spring",
               }}
-              className="absolute left-[0%] top-[70%] z-20 w-[105px] -translate-x-1/2 -translate-y-1/2 sm:w-[145px] lg:w-[125px] xl:w-[165px]"
+              className="absolute left-[10%] lg:left-[0%] top-[75%] lg:top-[70%] z-20 w-[105px] -translate-x-1/2 -translate-y-1/2 sm:w-[145px] lg:w-[125px] xl:w-[165px]"
             >
               <motion.div
                 animate={reduceMotion ? undefined : { rotate: 360 }}
@@ -146,7 +146,7 @@ export default function AboutSection() {
             viewport={{ once: true, amount: 0.2 }}
             className="relative z-10 order-3 pt-5 lg:pt-0"
           >
-            <h2 className="font-serif text-3xl font-bold leading-tight text-[#102943] sm:text-4xl xl:text-[44px]">
+            <h2 className="font-serif text-[29px] font-bold leading-tight text-[#102943] text-[29px] sm:text-4xl xl:text-[38px]">
               {aboutSectionData.homeSection.features[3].title}
               <br className="hidden xl:block" />
               <span className="mt-1 block text-[#b77a08]">

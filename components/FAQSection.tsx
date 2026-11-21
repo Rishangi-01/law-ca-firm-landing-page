@@ -71,7 +71,7 @@ export default function FAQSection() {
       
           <h2
             id="faq-heading"
-            className="font-serif text-4xl font-bold leading-[1.15] tracking-tight text-[#10243e] sm:text-5xl md:text-6xl lg:text-[4.3rem]"
+            className="font-serif font-bold leading-[1.15] tracking-tight text-[#10243e] text-[29px] sm:text-4xl xl:text-[38px]"
           >
             {faqSectionData.headingFirst}{" "}
             <span className="text-[#bd831b]">
