@@ -38,6 +38,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
 
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const pendingMobileNavTargetRef = useRef<string | null>(null);
 
   useEffect(() => {
     const sections = navLinks.map((link) => link.href.replace("#", ""));
@@ -220,7 +221,19 @@ export default function Navbar() {
         </button>
       </div>
 
-      <AnimatePresence>
+      <AnimatePresence
+        onExitComplete={() => {
+          const targetId = pendingMobileNavTargetRef.current;
+          pendingMobileNavTargetRef.current = null;
+
+          if (targetId) {
+            document.getElementById(targetId)?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }}
+      >
         {menuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -242,7 +255,13 @@ export default function Navbar() {
                     <a
                       key={link.label}
                       href={link.href}
-                      onClick={() => setMenuOpen(false)}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        pendingMobileNavTargetRef.current = id;
+                        window.history.pushState(null, "", link.href);
+                        setActiveSection(id);
+                        setMenuOpen(false);
+                      }}
                       className={`mobile-nav-link flex w-full items-center justify-between rounded-lg px-4 py-3 text-[16px] font-semibold transition-all duration-300 ${
                         isActive
                           ? "bg-[#f7f1e4] text-[#b77b09]"

@@ -116,7 +116,7 @@ export default function AboutSection() {
                 delay: 0.35,
                 type: "spring",
               }}
-              className="absolute left-[10%] lg:left-[0%] top-[75%] lg:top-[70%] z-20 w-[105px] -translate-x-1/2 -translate-y-1/2 sm:w-[145px] lg:w-[125px] xl:w-[165px]"
+              className="absolute left-[10%] lg:left-[5%] top-[75%] lg:top-[70%] z-20 w-[105px] -translate-x-1/2 -translate-y-1/2 sm:w-[145px] lg:w-[125px] xl:w-[165px]"
             >
               <motion.div
                 animate={reduceMotion ? undefined : { rotate: 360 }}
